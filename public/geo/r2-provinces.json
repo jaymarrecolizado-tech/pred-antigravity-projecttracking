@@ -1,0 +1,180 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "0209000000",
+                "name": "Batanes",
+                "level": "prov"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            121.85,
+                            20.25
+                        ],
+                        [
+                            122.05,
+                            20.25
+                        ],
+                        [
+                            122.05,
+                            20.95
+                        ],
+                        [
+                            121.75,
+                            20.95
+                        ],
+                        [
+                            121.85,
+                            20.25
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "0215000000",
+                "name": "Cagayan",
+                "level": "prov"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            121.3,
+                            17.5
+                        ],
+                        [
+                            122.25,
+                            17.5
+                        ],
+                        [
+                            122.3,
+                            18.6
+                        ],
+                        [
+                            121,
+                            18.6
+                        ],
+                        [
+                            121.3,
+                            17.5
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "0231000000",
+                "name": "Isabela",
+                "level": "prov"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            121.4,
+                            16.5
+                        ],
+                        [
+                            122.5,
+                            16.5
+                        ],
+                        [
+                            122.45,
+                            17.5
+                        ],
+                        [
+                            121.45,
+                            17.5
+                        ],
+                        [
+                            121.4,
+                            16.5
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "0250000000",
+                "name": "Nueva Vizcaya",
+                "level": "prov"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            120.8,
+                            15.8
+                        ],
+                        [
+                            121.45,
+                            15.8
+                        ],
+                        [
+                            121.4,
+                            16.7
+                        ],
+                        [
+                            120.85,
+                            16.7
+                        ],
+                        [
+                            120.8,
+                            15.8
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "0257000000",
+                "name": "Quirino",
+                "level": "prov"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            121.4,
+                            16.1
+                        ],
+                        [
+                            121.9,
+                            16.1
+                        ],
+                        [
+                            121.85,
+                            16.65
+                        ],
+                        [
+                            121.35,
+                            16.65
+                        ],
+                        [
+                            121.4,
+                            16.1
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
