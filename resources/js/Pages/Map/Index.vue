@@ -21,6 +21,18 @@
 
                 <div class="ribbon-divider"></div>
 
+                <!-- Basemap Selector -->
+                <div class="ribbon-control-group">
+                    <label class="ribbon-label">BASEMAP</label>
+                    <select v-model="selectedBasemap" class="ribbon-select" title="Switch map basemap style">
+                        <option value="canvas">Clean Canvas (No Watermark)</option>
+                        <option value="osm">OpenStreetMap</option>
+                        <option value="satellite">Satellite Imagery</option>
+                    </select>
+                </div>
+
+                <div class="ribbon-divider"></div>
+
                 <!-- Merge <---> Detail Granularity Slider (NMS Reference) -->
                 <div class="ribbon-control-group slider-group">
                     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
@@ -81,6 +93,7 @@
                 :metric="selectedMetric"
                 :granularity="granularitySlider"
                 :clusterMode="clusterMode"
+                :basemap="selectedBasemap"
                 :provinces="provinces"
                 :selectedProjectIds="selectedProjectIds"
                 :focusCoords="initialFocus"
@@ -284,6 +297,7 @@ const props = defineProps({
 });
 
 const selectedMetric = ref('completion');
+const selectedBasemap = ref('canvas');
 const granularitySlider = ref(50);
 const clusterMode = ref('distance');
 const showFilterDrawer = ref(false);

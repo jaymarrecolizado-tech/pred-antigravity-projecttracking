@@ -53,6 +53,10 @@ const props = defineProps({
         type: Object,
         default: () => ({}),
     },
+    basemap: {
+        type: String,
+        default: 'canvas', // 'canvas' | 'osm' | 'satellite'
+    },
 });
 
 const emit = defineEmits(['select-cluster', 'select-site']);
@@ -122,17 +126,35 @@ function initMap() {
 function updateBasemap() {
     if (!map) return;
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const tileUrl = isDark
-        ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-        : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+
+    let tileUrl = '';
+    let attribution = '';
+    let maxNativeZoom = 19;
+
+    if (props.basemap === 'osm') {
+        tileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+        attribution = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors';
+        maxNativeZoom = 19;
+    } else if (props.basemap === 'satellite') {
+        tileUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+        attribution = 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
+        maxNativeZoom = 19;
+    } else {
+        // Default: Clean Minimalist Canvas (World Light/Dark Gray Base) - Zero Watermarks!
+        tileUrl = isDark
+            ? 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}'
+            : 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+        attribution = 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ';
+        maxNativeZoom = 16;
+    }
 
     if (tileLayer) {
         map.removeLayer(tileLayer);
     }
 
     tileLayer = L.tileLayer(tileUrl, {
-        attribution: '&copy; CARTO &copy; OpenStreetMap contributors',
-        subdomains: 'abcd',
+        attribution: attribution,
+        maxNativeZoom: maxNativeZoom,
         maxZoom: 19,
     }).addTo(map);
 }
@@ -295,6 +317,7 @@ watch(() => props.selectedProjectIds, () => rebuildClusterIndex(), { deep: true 
 watch(() => props.granularity, () => rebuildClusterIndex());
 watch(() => props.metric, () => renderClusters());
 watch(() => props.clusterMode, () => renderClusters());
+watch(() => props.basemap, () => updateBasemap());
 
 onMounted(() => {
     initMap();
