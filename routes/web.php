@@ -5,7 +5,30 @@ use App\Http\Controllers\Auth\TwoFactorSetupController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// Public or unauthenticated routes handled by Fortify (/login, /two-factor-challenge, etc.)
+// Local dev 1-click instant login helper (active only in local environment)
+if (app()->environment('local')) {
+    Route::get('/dev-login/{role}', function (string $role) {
+        $emailMap = [
+            'encoder' => 'encoder.tuguegarao@dict.gov.ph',
+            'admin' => 'admin@dict.gov.ph',
+            'pm' => 'pm.nbp@dict.gov.ph',
+            'reviewer' => 'reviewer.r02@dict.gov.ph',
+            'partner' => 'partner.ilagan@dict.gov.ph',
+        ];
+
+        $email = $emailMap[$role] ?? 'encoder.tuguegarao@dict.gov.ph';
+        $user = \App\Models\User::where('email', $email)->first();
+
+        if ($user) {
+            \Illuminate\Support\Facades\Auth::login($user);
+            session()->put('demo_2fa_bypassed', true);
+            session()->regenerate();
+            return redirect()->route('dashboard')->with('success', "Instant sign-in successful as {$user->name} ({$user->email})");
+        }
+
+        return redirect()->route('login')->with('error', "User not found for role {$role}");
+    })->name('dev.login');
+}
 
 // Authenticated Routes
 Route::middleware(['auth', 'enforce.2fa'])->group(function () {

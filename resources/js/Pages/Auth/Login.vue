@@ -53,51 +53,56 @@
 
             <!-- Demo Quick Login Buttons -->
             <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px dashed var(--c-border);">
-                <div style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c-ink-muted); margin-bottom: 0.6rem; text-align: center;">
-                    ⚡ Quick Demo Credentials (1-Click Fill)
+                <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c-primary); margin-bottom: 0.6rem; text-align: center;">
+                    ⚡ Instant 1-Click Sign-In
                 </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;">
-                    <button 
-                        type="button" 
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem;">
+                    <a 
+                        href="/dev-login/encoder" 
                         class="btn btn-secondary" 
-                        style="font-size: 0.75rem; padding: 0.4rem 0.5rem; text-align: left; justify-content: flex-start;"
-                        @click="quickFill('encoder.tuguegarao@dict.gov.ph', 'Password123!')"
+                        style="font-size: 0.78rem; padding: 0.45rem 0.6rem; text-align: left; justify-content: flex-start; text-decoration: none; display: flex; align-items: center;"
                     >
                         📝 Encoder (Cagayan)
-                    </button>
-                    <button 
-                        type="button" 
+                    </a>
+                    <a 
+                        href="/dev-login/admin" 
                         class="btn btn-secondary" 
-                        style="font-size: 0.75rem; padding: 0.4rem 0.5rem; text-align: left; justify-content: flex-start;"
-                        @click="quickFill('admin@dict.gov.ph', 'Password123!')"
+                        style="font-size: 0.78rem; padding: 0.45rem 0.6rem; text-align: left; justify-content: flex-start; text-decoration: none; display: flex; align-items: center;"
                     >
                         👑 Super Admin
-                    </button>
-                    <button 
-                        type="button" 
+                    </a>
+                    <a 
+                        href="/dev-login/pm" 
                         class="btn btn-secondary" 
-                        style="font-size: 0.75rem; padding: 0.4rem 0.5rem; text-align: left; justify-content: flex-start;"
-                        @click="quickFill('pm.nbp@dict.gov.ph', 'Password123!')"
+                        style="font-size: 0.78rem; padding: 0.45rem 0.6rem; text-align: left; justify-content: flex-start; text-decoration: none; display: flex; align-items: center;"
                     >
                         📁 Project Manager
-                    </button>
-                    <button 
-                        type="button" 
+                    </a>
+                    <a 
+                        href="/dev-login/reviewer" 
                         class="btn btn-secondary" 
-                        style="font-size: 0.75rem; padding: 0.4rem 0.5rem; text-align: left; justify-content: flex-start;"
-                        @click="quickFill('reviewer.r02@dict.gov.ph', 'Password123!')"
+                        style="font-size: 0.78rem; padding: 0.45rem 0.6rem; text-align: left; justify-content: flex-start; text-decoration: none; display: flex; align-items: center;"
                     >
                         🔎 QA Reviewer
-                    </button>
+                    </a>
                 </div>
-                <div style="margin-top: 0.4rem;">
-                    <button 
-                        type="button" 
+                <div style="margin-top: 0.45rem;">
+                    <a 
+                        href="/dev-login/partner" 
                         class="btn btn-secondary btn-block" 
-                        style="font-size: 0.75rem; padding: 0.4rem 0.5rem; text-align: center; justify-content: center;"
-                        @click="quickFill('partner.ilagan@dict.gov.ph', 'Password123!')"
+                        style="font-size: 0.78rem; padding: 0.45rem 0.6rem; text-align: center; justify-content: center; text-decoration: none; display: flex;"
                     >
                         🤝 Partner / LGU Viewer (Ilagan City)
+                    </a>
+                </div>
+
+                <div style="text-align: center; margin-top: 0.75rem;">
+                    <button 
+                        type="button" 
+                        style="background: none; border: none; font-size: 0.73rem; color: var(--c-ink-muted); text-decoration: underline; cursor: pointer;"
+                        @click="quickFill('encoder.tuguegarao@dict.gov.ph', 'Password123!')"
+                    >
+                        Or auto-fill form with Encoder credentials
                     </button>
                 </div>
             </div>
@@ -124,7 +129,11 @@ function quickFill(email, password) {
 }
 
 function submit() {
-    form.post('/login', {
+    const targetUrl = (typeof window !== 'undefined' && window.location.pathname.endsWith('/login')) 
+        ? window.location.pathname 
+        : '/login';
+
+    form.post(targetUrl, {
         onFinish: () => form.reset('password'),
     });
 }
