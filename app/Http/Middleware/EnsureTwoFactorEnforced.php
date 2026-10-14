@@ -30,6 +30,10 @@ class EnsureTwoFactorEnforced
         }
 
         if ($this->grantResolver->requiresTwoFactor($user) && !$user->hasEnabledTwoFactorAuthentication()) {
+            if ($request->session()->get('demo_2fa_bypassed')) {
+                return $next($request);
+            }
+
             return redirect()->route('two-factor.setup')
                 ->with('warning', 'Your role requires Two-Factor Authentication (2FA) to be enabled for security compliance.');
         }

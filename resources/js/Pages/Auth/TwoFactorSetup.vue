@@ -23,6 +23,9 @@
                         <div style="font-size: 0.82rem; color: var(--c-ink-secondary); margin-top: 0.2rem;">
                             {{ $page.props.flash.warning }}
                         </div>
+                        <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; margin-top: 0.6rem; border-color: var(--scale-warning-border); background: var(--c-surface);" @click="bypassDemo">
+                            Proceed to Dashboard (Demo Mode) →
+                        </button>
                     </div>
                 </div>
             </div>
@@ -137,6 +140,10 @@ const secretKey = ref('');
 const confirmCode = ref('');
 const confirmError = ref('');
 const recoveryCodes = ref([]);
+
+function bypassDemo() {
+    router.post('/two-factor/demo-bypass');
+}
 
 async function enable2FA() {
     loading.value = true;

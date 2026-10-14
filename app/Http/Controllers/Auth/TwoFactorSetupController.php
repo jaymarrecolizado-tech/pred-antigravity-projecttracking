@@ -18,4 +18,10 @@ class TwoFactorSetupController extends Controller
             'confirmed' => $user->two_factor_confirmed_at !== null,
         ]);
     }
+
+    public function demoBypass(Request $request)
+    {
+        $request->session()->put('demo_2fa_bypassed', true);
+        return redirect()->route('dashboard')->with('success', 'Demo mode active: Two-Factor Authentication bypassed for this session.');
+    }
 }

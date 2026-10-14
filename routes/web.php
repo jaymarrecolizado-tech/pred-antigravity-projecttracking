@@ -16,6 +16,7 @@ Route::middleware(['auth', 'enforce.2fa'])->group(function () {
 
     // 2FA Setup Flow (excluded from enforce.2fa redirection inside the middleware itself)
     Route::get('/two-factor/setup', [TwoFactorSetupController::class, 'show'])->name('two-factor.setup');
+    Route::post('/two-factor/demo-bypass', [TwoFactorSetupController::class, 'demoBypass'])->name('two-factor.demo-bypass');
 
     // Project Portfolio
     Route::get('/projects', [\App\Http\Controllers\Portfolio\ProjectController::class, 'index'])->name('projects.index');
