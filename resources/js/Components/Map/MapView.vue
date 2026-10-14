@@ -350,27 +350,29 @@ onBeforeUnmount(() => {
     color: #ffffff;
     font-family: var(--font-sans);
     cursor: pointer;
-    transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s ease;
+    transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.16s ease;
     user-select: none;
+    line-height: 1;
 }
 
 .nms-cluster-bubble:hover {
-    transform: scale(1.12);
-    box-shadow: 0 0 0 4px #ffffff, 0 6px 16px rgba(0, 0, 0, 0.45) !important;
+    transform: scale(1.18);
+    box-shadow: 0 0 0 3px #ffffff, 0 4px 14px rgba(0, 0, 0, 0.45) !important;
+    z-index: 9999 !important;
 }
 
 .bubble-count {
     font-weight: 800;
-    font-size: 0.92rem;
+    font-size: 0.74rem;
     line-height: 1;
     letter-spacing: -0.02em;
 }
 
 .bubble-pct {
-    font-size: 0.68rem;
+    font-size: 0.54rem;
     font-weight: 700;
     line-height: 1;
-    margin-top: 2px;
+    margin-top: 1px;
     opacity: 0.95;
     font-family: var(--font-mono);
 }
@@ -381,7 +383,8 @@ onBeforeUnmount(() => {
 }
 
 .nms-site-marker:hover {
-    transform: scale(1.3) !important;
+    transform: scale(1.5) !important;
+    z-index: 9999 !important;
 }
 
 /* Floating Map Legend Card */

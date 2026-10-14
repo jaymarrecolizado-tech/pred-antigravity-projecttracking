@@ -41,8 +41,8 @@
                     </div>
                     <input
                         type="range"
-                        min="25"
-                        max="95"
+                        min="35"
+                        max="115"
                         step="5"
                         v-model.number="granularitySlider"
                         class="ribbon-slider"
@@ -298,7 +298,7 @@ const props = defineProps({
 
 const selectedMetric = ref('completion');
 const selectedBasemap = ref('canvas');
-const granularitySlider = ref(50);
+const granularitySlider = ref(75);
 const clusterMode = ref('distance');
 const showFilterDrawer = ref(false);
 const selectedProjectIds = ref(

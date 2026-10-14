@@ -54,14 +54,16 @@ function interpolateHex(hex1, hex2, factor) {
  */
 export function createClusterIcon(L, count, percentage) {
     const bg = getPercentageColor(percentage);
-    const size = count < 10 ? 46 : (count < 100 ? 54 : 62);
+    // Sleek, compact cluster sizing that doesn't obstruct regional maps:
+    // < 10: 28px, 10-99: 35px, 100+: 42px
+    const size = count < 10 ? 28 : (count < 100 ? 35 : 42);
 
     const html = `
         <div class="nms-cluster-bubble" style="
             width: ${size}px;
             height: ${size}px;
             background: ${bg};
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 3px 12px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.95), 0 2px 8px rgba(0, 0, 0, 0.3);
         ">
             <div class="bubble-count">${count}</div>
             <div class="bubble-pct">${Math.round(percentage)}%</div>
@@ -84,29 +86,29 @@ export function createSiteIcon(L, shape = 'circle', color = '#2563eb', isOperati
     let borderRadius = '50%';
 
     if (shape === 'square') {
-        borderRadius = '4px';
-    } else if (shape === 'diamond') {
         borderRadius = '3px';
+    } else if (shape === 'diamond') {
+        borderRadius = '2px';
     }
 
     const transform = shape === 'diamond' ? 'rotate(45deg)' : 'none';
 
     const html = `
         <div class="nms-site-marker" style="
-            width: 22px;
-            height: 22px;
+            width: 13px;
+            height: 13px;
             background: ${color};
             border-radius: ${borderRadius};
             transform: ${transform};
-            border: 2px solid #ffffff;
-            box-shadow: 0 0 0 2px ${ringColor}, 0 2px 8px rgba(0,0,0,0.3);
+            border: 1.5px solid #ffffff;
+            box-shadow: 0 0 0 1.5px ${ringColor}, 0 2px 6px rgba(0,0,0,0.3);
         "></div>
     `;
 
     return L.divIcon({
         html: html,
         className: 'custom-site-wrapper',
-        iconSize: [22, 22],
-        iconAnchor: [11, 11],
+        iconSize: [13, 13],
+        iconAnchor: [6.5, 6.5],
     });
 }
