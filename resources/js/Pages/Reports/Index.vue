@@ -159,28 +159,68 @@
 
         <!-- Custom Filter Controls Card -->
         <div class="card" style="margin-bottom: 1.5rem; padding: 1.25rem;">
-            <div style="font-weight: 700; font-size: 0.9rem; color: var(--c-ink); margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between;">
-                <span>Custom Query & Accomplishment Filter</span>
+            <div style="font-weight: 700; font-size: 0.9rem; color: var(--c-ink); margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                    <span>Accomplishment & Geographic Query Filter</span>
+                    <span class="badge badge-primary" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">
+                        📍 {{ activeGeoScope }}
+                    </span>
+                </div>
                 <span style="font-size: 0.74rem; font-family: var(--font-mono); color: var(--c-ink-muted);">
-                    {{ matrix.total_sites }} Sites Matching
+                    {{ matrix.total_sites }} Sites in Filtered Scope
                 </span>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; align-items: flex-end;">
+
+            <!-- Tier 1: 4-Level Geographic Hierarchy Filter -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 0.75rem;">
+                <div>
+                    <label class="form-label" style="font-size: 0.75rem;">1. Province</label>
+                    <select v-model="filterForm.province_prefix" @change="onProvinceChange" class="form-input">
+                        <option v-for="prov in provinces" :key="prov.prefix" :value="prov.prefix">
+                            {{ prov.name }}
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label" style="font-size: 0.75rem;">2. Congressional District</label>
+                    <select v-model="filterForm.district" @change="onDistrictChange" class="form-input">
+                        <option value="">All Congressional Districts (12)</option>
+                        <option v-for="dist in filteredDistricts" :key="dist.name" :value="dist.name">
+                            {{ dist.name }}
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label" style="font-size: 0.75rem;">3. Municipality / City</label>
+                    <select v-model="filterForm.municipality" @change="onMunicipalityChange" class="form-input">
+                        <option value="">All Municipalities / Cities ({{ filteredMunicipalities.length }})</option>
+                        <option v-for="mun in filteredMunicipalities" :key="mun.name + mun.province" :value="mun.name">
+                            {{ mun.name }} ({{ mun.province }})
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label" style="font-size: 0.75rem;">4. Barangay</label>
+                    <select v-model="filterForm.barangay" @change="applyFilters" class="form-input">
+                        <option value="">All Barangays ({{ filteredBarangays.length }})</option>
+                        <option v-for="bgy in filteredBarangays" :key="bgy.name + bgy.municipality" :value="bgy.name">
+                            {{ bgy.name }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tier 2: Contract Batch, Status & Action Buttons -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; align-items: flex-end; padding-top: 0.75rem; border-top: 1px dashed var(--c-border);">
                 <div>
                     <label class="form-label" style="font-size: 0.75rem;">Delivery Lot / Contract Batch</label>
                     <select v-model="filterForm.project_id" @change="applyFilters" class="form-input">
                         <option value="">All Delivery Lots (14)</option>
                         <option v-for="proj in projects" :key="proj.id" :value="proj.id">
                             {{ proj.name }}
-                        </option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="form-label" style="font-size: 0.75rem;">Province Scope</label>
-                    <select v-model="filterForm.province_prefix" @change="applyFilters" class="form-input">
-                        <option v-for="prov in provinces" :key="prov.prefix" :value="prov.prefix">
-                            {{ prov.name }}
                         </option>
                     </select>
                 </div>
@@ -197,10 +237,10 @@
 
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <button type="button" @click="resetFilters" class="btn btn-ghost" style="flex: 1;">
-                        Reset
+                        Reset Filters
                     </button>
                     <a :href="excelExportUrl" class="btn btn-primary" style="flex: 1;">
-                        Download
+                        Download Scope
                     </a>
                 </div>
             </div>
@@ -253,7 +293,7 @@
                 <div>
                     <div class="card-title">Free Wi-Fi Sites Accomplishment Matrix</div>
                     <div style="font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
-                        Showing top {{ matrix.preview_rows.length }} of {{ matrix.total_sites }} matching sites (full dataset included in Excel/CSV export)
+                        Showing top {{ matrix.preview_rows.length }} of {{ matrix.total_sites }} matching sites for scope: <strong>{{ activeGeoScope }}</strong>
                     </div>
                 </div>
                 <div style="display: flex; gap: 0.4rem;">
@@ -266,17 +306,20 @@
                     <thead>
                         <tr>
                             <th>Site Code</th>
-                            <th>Delivery Lot / Contract</th>
+                            <th>Delivery Lot</th>
+                            <th>Facility Name</th>
                             <th>Province</th>
+                            <th>Congressional District</th>
                             <th>Municipality</th>
+                            <th>Barangay</th>
                             <th>Target Date</th>
-                            <th>Current Status</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-if="matrix.preview_rows.length === 0">
-                            <td colspan="7" style="text-align: center; padding: 2rem; color: var(--c-ink-muted);">
+                            <td colspan="10" style="text-align: center; padding: 2rem; color: var(--c-ink-muted);">
                                 No site records match the specified query filters.
                             </td>
                         </tr>
@@ -285,8 +328,15 @@
                                 {{ row.site_code }}
                             </td>
                             <td>{{ row.project_name }}</td>
+                            <td style="font-weight: 600;">{{ row.facility_name }}</td>
                             <td>{{ row.province }}</td>
+                            <td style="font-size: 0.8rem; color: var(--c-primary); font-weight: 600;">
+                                {{ row.district }}
+                            </td>
                             <td>{{ row.municipality }}</td>
+                            <td style="font-size: 0.82rem; color: var(--c-ink-muted);">
+                                {{ row.barangay }}
+                            </td>
                             <td style="font-family: var(--font-mono); font-size: 0.78rem;">{{ row.target_date }}</td>
                             <td>
                                 <span class="chip-status" :class="row.status === 'operational' ? 'status-online' : 'status-ongoing'">
@@ -406,6 +456,18 @@ const props = defineProps({
         type: Array,
         required: true,
     },
+    districts: {
+        type: Array,
+        default: () => [],
+    },
+    municipalities: {
+        type: Array,
+        default: () => [],
+    },
+    barangays: {
+        type: Array,
+        default: () => [],
+    },
     projects: {
         type: Array,
         required: true,
@@ -431,22 +493,98 @@ const props = defineProps({
 const filterForm = ref({
     project_id: props.filters.project_id || '',
     province_prefix: props.filters.province_prefix || '',
+    district: props.filters.district || '',
+    municipality: props.filters.municipality || '',
+    barangay: props.filters.barangay || '',
     status: props.filters.status || '',
 });
+
+// Cascading Filter Logic
+const filteredDistricts = computed(() => {
+    if (!filterForm.value.province_prefix) return props.districts;
+    return props.districts.filter(d => d.province_prefix === filterForm.value.province_prefix);
+});
+
+const filteredMunicipalities = computed(() => {
+    let list = props.municipalities;
+    if (filterForm.value.province_prefix) {
+        list = list.filter(m => m.province_prefix === filterForm.value.province_prefix);
+    }
+    if (filterForm.value.district) {
+        list = list.filter(m => m.district === filterForm.value.district);
+    }
+    return list;
+});
+
+const filteredBarangays = computed(() => {
+    if (filterForm.value.municipality) {
+        const munLower = filterForm.value.municipality.toLowerCase();
+        return props.barangays.filter(b => b.municipality.toLowerCase() === munLower);
+    }
+    if (filterForm.value.province_prefix) {
+        const provObj = props.provinces.find(p => p.prefix === filterForm.value.province_prefix);
+        if (provObj) {
+            const pName = provObj.name.toLowerCase();
+            return props.barangays.filter(b => b.province.toLowerCase() === pName);
+        }
+    }
+    return props.barangays.slice(0, 100);
+});
+
+function onProvinceChange() {
+    filterForm.value.district = '';
+    filterForm.value.municipality = '';
+    filterForm.value.barangay = '';
+    applyFilters();
+}
+
+function onDistrictChange() {
+    filterForm.value.municipality = '';
+    filterForm.value.barangay = '';
+    applyFilters();
+}
+
+function onMunicipalityChange() {
+    filterForm.value.barangay = '';
+    applyFilters();
+}
 
 function applyFilters() {
     router.get('/reports', filterForm.value, { preserveState: true });
 }
 
 function resetFilters() {
-    filterForm.value = { project_id: '', province_prefix: '', status: '' };
+    filterForm.value = {
+        project_id: '',
+        province_prefix: '',
+        district: '',
+        municipality: '',
+        barangay: '',
+        status: '',
+    };
     router.get('/reports');
 }
+
+const activeGeoScope = computed(() => {
+    const parts = [];
+    if (filterForm.value.province_prefix) {
+        const p = props.provinces.find(prov => prov.prefix === filterForm.value.province_prefix);
+        if (p && p.name !== 'All Region 2') parts.push(p.name);
+    }
+    if (filterForm.value.district) parts.push(filterForm.value.district);
+    if (filterForm.value.municipality) parts.push(filterForm.value.municipality);
+    if (filterForm.value.barangay) parts.push('Brgy. ' + filterForm.value.barangay);
+
+    return parts.length > 0 ? parts.join(' • ') : 'All Region 02';
+});
 
 const excelExportUrl = computed(() => {
     const params = new URLSearchParams();
     if (filterForm.value.project_id) params.append('project_id', filterForm.value.project_id);
     if (filterForm.value.province_prefix) params.append('province_prefix', filterForm.value.province_prefix);
+    if (filterForm.value.district) params.append('district', filterForm.value.district);
+    if (filterForm.value.municipality) params.append('municipality', filterForm.value.municipality);
+    if (filterForm.value.barangay) params.append('barangay', filterForm.value.barangay);
     if (filterForm.value.status) params.append('status', filterForm.value.status);
     return '/reports/export/excel?' + params.toString();
 });
@@ -455,6 +593,9 @@ const csvExportUrl = computed(() => {
     const params = new URLSearchParams();
     if (filterForm.value.project_id) params.append('project_id', filterForm.value.project_id);
     if (filterForm.value.province_prefix) params.append('province_prefix', filterForm.value.province_prefix);
+    if (filterForm.value.district) params.append('district', filterForm.value.district);
+    if (filterForm.value.municipality) params.append('municipality', filterForm.value.municipality);
+    if (filterForm.value.barangay) params.append('barangay', filterForm.value.barangay);
     if (filterForm.value.status) params.append('status', filterForm.value.status);
     return '/reports/export/csv?' + params.toString();
 });

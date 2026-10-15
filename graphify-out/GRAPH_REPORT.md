@@ -1,16 +1,16 @@
 # Graph Report - pred-project-tracking  (2026-10-15)
 
 ## Corpus Check
-- 150 files · ~518,547 words
+- 150 files · ~520,029 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 966 nodes · 1855 edges · 97 communities (81 shown, 16 thin omitted)
-- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 169 edges (avg confidence: 0.8)
+- 975 nodes · 1869 edges · 91 communities (76 shown, 15 thin omitted)
+- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 170 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `de488aad`
+- Built from commit: `475670c6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -47,11 +47,9 @@
 - require-dev
 - UpdateRollupJob.php
 - StatusDef
-- StatusWorkflow
 - require
 - Dashboard.vue
 - ReviewQueue.vue
-- RollupDaily
 - config
 - Show.vue
 - SiteRegistryTest
@@ -68,11 +66,8 @@
 - bootstrap/app.php
 - REGION II SITE STATUS 2026_185a78b2.md
 - DICT Region 2 Infrastructure & Program Rollout Monitoring Platform
-- ProjectCrudTest
-- UpdateUserProfileInformation.php
 - Plan#8: Rollup Tables, Backlog Tracking & Analytics Engine
 - Plan#6: Field Reporting, Timeline & Verification Engine
-- Plan#2: Authentication, Scoped RBAC & 2FA Engine
 - Plan#3: PSGC Geographic Hierarchy, Districts & Boundary Layers
 - Plan#4: Configurable Multi-Project & Portfolio Engine
 - Plan#5: Shared Location & Institution Registries
@@ -80,7 +75,6 @@
 - Plan#7: Interactive Cartographic Map Engine (Leaflet + Supercluster)
 - Plan#9: Reporting, Audit Trail & Automated Dispatch
 - Plan#1: Foundational Design System & App Shell
-- GeoTest
 - ReconLogo.vue
 - rules/graphify.md
 - workflows/graphify.md
@@ -93,58 +87,58 @@
 5. `GrantResolver` - 36 edges
 6. `Program` - 33 edges
 7. `TestCase` - 30 edges
-8. `PsgcArea` - 27 edges
-9. `KpiCalculator` - 26 edges
-10. `Location` - 26 edges
+8. `Location` - 28 edges
+9. `PsgcArea` - 27 edges
+10. `KpiCalculator` - 26 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `ProjectCrudTest` --references--> `Program`  [EXTRACTED]
   tests/Feature/ProjectCrudTest.php → app/Domain/Portfolio/Program.php
 - `AnalyticsRollupTest` --references--> `Project`  [EXTRACTED]
   tests/Feature/AnalyticsRollupTest.php → app/Domain/Portfolio/Project.php
-- `InteractiveMapTest` --references--> `Project`  [EXTRACTED]
-  tests/Feature/InteractiveMapTest.php → app/Domain/Portfolio/Project.php
 - `ReportingAuditTest` --references--> `Project`  [EXTRACTED]
   tests/Feature/ReportingAuditTest.php → app/Domain/Portfolio/Project.php
 - `SiteRegistryTest` --references--> `Project`  [EXTRACTED]
   tests/Feature/SiteRegistryTest.php → app/Domain/Portfolio/Project.php
+- `AnalyticsRollupTest` --references--> `ProjectType`  [EXTRACTED]
+  tests/Feature/AnalyticsRollupTest.php → app/Domain/Portfolio/ProjectType.php
 
 ## Import Cycles
 - None detected.
 
-## Communities (97 total, 16 thin omitted)
+## Communities (91 total, 15 thin omitted)
 
 ### Community 0 - "Illuminate\Database\Eloquent\Relations\BelongsTo"
-Cohesion: 0.05
-Nodes (24): RoleGrant, CongressionalDistrict, DistrictMembership, IndicatorTarget, InterventionType, Program, Project, ProjectScope (+16 more)
+Cohesion: 0.07
+Nodes (17): RoleGrant, AuditLog, DistrictMembership, IndicatorTarget, InterventionType, Program, ProjectScope, CorrectionRequest (+9 more)
 
 ### Community 1 - "Illuminate\Http\Request"
-Cohesion: 0.08
-Nodes (18): AuditLog, FieldDef, ProjectType, AuditController, GeoController, ProjectTypeController, UserController, TwoFactorSetupController (+10 more)
+Cohesion: 0.06
+Nodes (21): GrantResolver, FieldDef, ProjectType, StatusWorkflow, AuditController, ProjectTypeController, UserController, TwoFactorSetupController (+13 more)
 
 ### Community 2 - "User"
-Cohesion: 0.11
-Nodes (10): CreateNewUser, ResetUserPassword, UpdateUserPassword, AppServiceProvider, FortifyServiceProvider, Illuminate\Support\ServiceProvider, Laravel\Fortify\Contracts\CreatesNewUsers, Laravel\Fortify\Contracts\ResetsUserPasswords (+2 more)
+Cohesion: 0.06
+Nodes (18): CreateNewUser, ResetUserPassword, UpdateUserPassword, UpdateUserProfileInformation, User, AppServiceProvider, FortifyServiceProvider, Illuminate\Foundation\Auth\User (+10 more)
 
 ### Community 3 - "devDependencies"
 Cohesion: 0.06
 Nodes (33): axios, concurrently, @inertiajs/vue3, laravel-vite-plugin, leaflet, mapshaper, allowScripts, esbuild@0.25.12 (+25 more)
 
 ### Community 4 - "BoundaryValidator"
-Cohesion: 0.07
-Nodes (7): BoundaryValidator, StatusWorkflow, SiteImportService, Attachment, FraudDetector, BoundaryValidatorTest, FraudDetectorTest
+Cohesion: 0.12
+Nodes (3): BoundaryValidator, SiteImportService, BoundaryValidatorTest
 
 ### Community 5 - "PsgcArea"
-Cohesion: 0.22
-Nodes (3): PsgcImport, PsgcArea, Illuminate\Database\Eloquent\Builder
+Cohesion: 0.08
+Nodes (8): DistrictsImport, PsgcImport, CongressionalDistrict, PsgcArea, GeoController, Illuminate\Database\Eloquent\Builder, Illuminate\Database\Eloquent\Relations\HasMany, Illuminate\Http\JsonResponse
 
 ### Community 6 - "Intervention"
-Cohesion: 0.12
-Nodes (6): Intervention, UserFactory, Illuminate\Database\Eloquent\Factories\Factory, Illuminate\Database\Eloquent\Relations\HasOne, static, FieldSubmissionTest
+Cohesion: 0.08
+Nodes (10): Attachment, FraudDetector, Intervention, UserFactory, InterventionSeeder, Illuminate\Database\Eloquent\Factories\Factory, Illuminate\Database\Eloquent\Relations\HasOne, static (+2 more)
 
 ### Community 7 - "ReportingAuditTest"
-Cohesion: 0.14
-Nodes (3): AuditLogger, ReportSubscription, ReportingAuditTest
+Cohesion: 0.18
+Nodes (8): 1. Prerequisites & Required PHP Extensions, 2. Initial Setup & Database Provisioning, 3. Background Queue Worker (Supervisor), 4. Automated Scheduled Cron Tasks, 5. Nginx Web Server Configuration, 6. Append-Only Integrity & Security Auditing, DICT Region 2 Infrastructure & Program Rollout Monitoring Platform, Enterprise Deployment & Operations Guide (`DEPLOYMENT.md`)
 
 ### Community 9 - "MapView.vue"
 Cohesion: 0.24
@@ -159,8 +153,8 @@ Cohesion: 0.13
 Nodes (8): currentStep, expandedProvinces, form, generateCode(), getMunicipalitiesForProvince(), onProgramChange(), props, toggleProvince()
 
 ### Community 12 - "Illuminate\Database\Eloquent\Relations\HasMany"
-Cohesion: 0.09
-Nodes (20): 1. Prerequisites & Required PHP Extensions, 2. Initial Setup & Database Provisioning, 3. Background Queue Worker (Supervisor), 4. Automated Scheduled Cron Tasks, 5. Nginx Web Server Configuration, 6. Append-Only Integrity & Security Auditing, DICT Region 2 Infrastructure & Program Rollout Monitoring Platform, Enterprise Deployment & Operations Guide (`DEPLOYMENT.md`) (+12 more)
+Cohesion: 0.17
+Nodes (12): 🧪 Automated Test Suite, 🔑 Demo & Verification Accounts, Department of Information and Communications Technology — Regional Office 02 (Cagayan Valley), 📖 Documentation & Guides, Installation, 🚀 Key Features, ⚙️ Local Setup & Quickstart, 🏛️ Master Blueprint & Implementation Status (+4 more)
 
 ### Community 13 - "scripts"
 Cohesion: 0.13
@@ -171,8 +165,8 @@ Cohesion: 0.14
 Nodes (12): applyFilters(), hasActiveFilters, importPayloadString, importProjectId, isImporting, props, resetFilters(), searchQuery (+4 more)
 
 ### Community 15 - "KpiCalculator"
-Cohesion: 0.17
-Nodes (5): KpiCalculator, Carbon, ProjectSite, DashboardController, Carbon\Carbon
+Cohesion: 0.06
+Nodes (18): DispatchReportsCommand, Carbon, ImportFreeWifiData, RebuildRollupCommand, KpiCalculator, Carbon, AuditLogger, HasMany (+10 more)
 
 ### Community 16 - "TwoFactorSetup.vue"
 Cohesion: 0.14
@@ -183,12 +177,8 @@ Cohesion: 0.16
 Nodes (9): applyFilters(), currentKind, filterKind(), hasActiveFilters, props, resetFilters(), searchQuery, selectedLifecycle (+1 more)
 
 ### Community 18 - "Reports/Index.vue"
-Cohesion: 0.13
-Nodes (7): csvExportUrl, excelExportUrl, filterForm, props, recipientInput, showModal, subForm
-
-### Community 19 - ".parent"
-Cohesion: 0.06
-Nodes (8): RollupDaily, StatusDef, Location, HandleInertiaRequests, Inertia\Middleware, AnalyticsRollupTest, FreeWifiImportTest, StatusWorkflowTest
+Cohesion: 0.10
+Nodes (15): activeGeoScope, applyFilters(), csvExportUrl, excelExportUrl, filteredBarangays, filteredDistricts, filteredMunicipalities, filterForm (+7 more)
 
 ### Community 20 - "Edit.vue"
 Cohesion: 0.15
@@ -203,8 +193,8 @@ Cohesion: 0.15
 Nodes (8): availableInterventions, availableStatuses, customFields, form, gpsStatusMessage, isCapturingGps, props, selectedSite
 
 ### Community 23 - "ProjectType"
-Cohesion: 0.14
-Nodes (5): User, Illuminate\Foundation\Auth\User, Illuminate\Notifications\Notifiable, Laravel\Fortify\TwoFactorAuthenticatable, AuthTest
+Cohesion: 0.12
+Nodes (8): Institution, DatabaseSeeder, DemoTelemetrySeeder, FreeWifiRealDataSeeder, PortfolioSeeder, RegistrySeeder, UserSeeder, Illuminate\Database\Seeder
 
 ### Community 24 - "Geo/Index.vue"
 Cohesion: 0.20
@@ -218,10 +208,6 @@ Nodes (5): createForm, grantForm, props, selectedUserForGrant, showCreateModal
 Cohesion: 0.20
 Nodes (8): applyFilters(), currentKind, filterKind(), instForm, props, resetFilters(), searchQuery, showModal
 
-### Community 27 - "ReportController.php"
-Cohesion: 0.36
-Nodes (3): ExcelReportGenerator, ReportController, Symfony\Component\HttpFoundation\BinaryFileResponse
-
 ### Community 28 - "composer.json"
 Cohesion: 0.18
 Nodes (10): autoload-dev, psr-4, description, license, minimum-stability, name, prefer-stable, Tests\\ (+2 more)
@@ -234,14 +220,6 @@ Nodes (10): require-dev, fakerphp/faker, laravel/pail, laravel/pint, laravel/sai
 Cohesion: 0.36
 Nodes (6): UpdateRollupJob, Illuminate\Bus\Queueable, Illuminate\Contracts\Queue\ShouldQueue, Illuminate\Foundation\Bus\Dispatchable, Illuminate\Queue\InteractsWithQueue, Illuminate\Queue\SerializesModels
 
-### Community 31 - "StatusDef"
-Cohesion: 0.20
-Nodes (5): GrantResolver, EnsureTwoFactorEnforced, Closure, Symfony\Component\HttpFoundation\Response, GrantResolverTest
-
-### Community 32 - "StatusWorkflow"
-Cohesion: 0.19
-Nodes (7): DispatchReportsCommand, Carbon, DistrictsImport, ImportFreeWifiData, RebuildRollupCommand, Command, Illuminate\Console\Command
-
 ### Community 33 - "require"
 Cohesion: 0.25
 Nodes (8): require, inertiajs/inertia-laravel, laravel/fortify, laravel/framework, laravel/tinker, openspout/openspout, php, tightenco/ziggy
@@ -253,10 +231,6 @@ Nodes (3): activeTab, currentTime, props
 ### Community 35 - "ReviewQueue.vue"
 Cohesion: 0.25
 Nodes (3): currentStatus, props, reviewNotesMap
-
-### Community 36 - "RollupDaily"
-Cohesion: 0.25
-Nodes (4): Illuminate\Foundation\Testing\RefreshDatabase, Illuminate\Foundation\Testing\TestCase, ExampleTest, TestCase
 
 ### Community 37 - "config"
 Cohesion: 0.29
@@ -274,6 +248,10 @@ Nodes (5): autoload, psr-4, App\\, Database\\Factories\\, Database\\Seeders\\
 Cohesion: 0.40
 Nodes (5): dev-master, extra, branch-alias, laravel, dont-discover
 
+### Community 45 - "InteractiveMapTest"
+Cohesion: 0.20
+Nodes (3): Project, Illuminate\Database\Eloquent\SoftDeletes, InteractiveMapTest
+
 ### Community 48 - "keywords"
 Cohesion: 0.67
 Nodes (3): keywords, framework, laravel
@@ -283,8 +261,8 @@ Cohesion: 0.15
 Nodes (12): Sheet: AP MAC  ADDRESS, Sheet: Copy of II, Sheet: NEW SITES ELEARNING, Sheet: NEW SITES FOR DECLARATION, Sheet: NEW SITES PIALEOS - RPS (DATA L, Sheet: NEW SITES (PICS MUN LOT 2), Sheet: New Sites (POP Extension 2025), Sheet: October (+4 more)
 
 ### Community 80 - "DICT Region 2 Infrastructure & Program Rollout Monitoring Platform"
-Cohesion: 0.25
-Nodes (8): 4 Tracking Archetypes (Project Kinds), DICT Region 2 Infrastructure & Program Rollout Monitoring Platform, Implementation Details, Implementation Status Matrix (100% COMPLETE), Master Implementation Blueprint (`Plan.md`), Objective, Plan#10: Real Operational Data Ingestion & Enterprise Operationalization, Project Architecture & Environment Overview
+Cohesion: 0.15
+Nodes (13): 4 Tracking Archetypes (Project Kinds), Database Schema, DICT Region 2 Infrastructure & Program Rollout Monitoring Platform, Implementation Details, Implementation Status Matrix (100% COMPLETE), Logic & Services, Master Implementation Blueprint (`Plan.md`), Objective (+5 more)
 
 ### Community 83 - "Plan#8: Rollup Tables, Backlog Tracking & Analytics Engine"
 Cohesion: 0.40
@@ -293,10 +271,6 @@ Nodes (5): Background Jobs & Calculations, Database Schema, Objective, Plan#8: R
 ### Community 84 - "Plan#6: Field Reporting, Timeline & Verification Engine"
 Cohesion: 0.40
 Nodes (5): Core Features, Database Schema, Objective, Plan#6: Field Reporting, Timeline & Verification Engine, Verification & Acceptance Criteria
-
-### Community 85 - "Plan#2: Authentication, Scoped RBAC & 2FA Engine"
-Cohesion: 0.40
-Nodes (5): Database Schema, Logic & Services, Objective, Plan#2: Authentication, Scoped RBAC & 2FA Engine, Verification & Acceptance Criteria
 
 ### Community 86 - "Plan#3: PSGC Geographic Hierarchy, Districts & Boundary Layers"
 Cohesion: 0.40
@@ -327,24 +301,24 @@ Cohesion: 0.50
 Nodes (4): Objective, Plan#1: Foundational Design System & App Shell, Scope & Tasks, Verification & Acceptance Criteria
 
 ## Knowledge Gaps
-- **241 isolated node(s):** `$schema`, `name`, `type`, `description`, `laravel` (+236 more)
+- **245 isolated node(s):** `$schema`, `name`, `type`, `description`, `laravel` (+240 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `User` connect `ProjectType` to `StatusWorkflow`, `Illuminate\Http\Request`, `User`, `Illuminate\Database\Eloquent\Relations\BelongsTo`, `RollupDaily`, `BoundaryValidator`, `Intervention`, `ReportingAuditTest`, `SiteRegistryTest`, `InteractiveMapTest`, `ProjectCrudTest`, `UpdateUserProfileInformation.php`, `.parent`, `GeoTest`, `StatusDef`?**
+- **Why does `User` connect `User` to `Illuminate\Database\Eloquent\Relations\BelongsTo`, `Illuminate\Http\Request`, `Intervention`, `SiteRegistryTest`, `InteractiveMapTest`, `KpiCalculator`, `.parent`, `ProjectType`, `ReportController.php`?**
   _High betweenness centrality (0.052) - this node is a cross-community bridge._
-- **Why does `ProjectSite` connect `KpiCalculator` to `StatusWorkflow`, `Illuminate\Database\Eloquent\Relations\BelongsTo`, `Illuminate\Http\Request`, `BoundaryValidator`, `RollupDaily`, `Intervention`, `ReportingAuditTest`, `ProjectSite`, `InteractiveMapTest`, `.parent`, `ReportController.php`?**
+- **Why does `ProjectSite` connect `KpiCalculator` to `Illuminate\Database\Eloquent\Relations\BelongsTo`, `Illuminate\Http\Request`, `BoundaryValidator`, `Intervention`, `ProjectSite`, `InteractiveMapTest`, `.parent`, `ProjectType`, `ReportController.php`?**
   _High betweenness centrality (0.026) - this node is a cross-community bridge._
-- **Why does `ProjectType` connect `Illuminate\Http\Request` to `StatusWorkflow`, `Illuminate\Database\Eloquent\Relations\BelongsTo`, `BoundaryValidator`, `RollupDaily`, `ReportingAuditTest`, `SiteRegistryTest`, `InteractiveMapTest`, `ProjectCrudTest`, `.parent`?**
+- **Why does `ProjectType` connect `Illuminate\Http\Request` to `Illuminate\Database\Eloquent\Relations\BelongsTo`, `User`, `PsgcArea`, `Intervention`, `SiteRegistryTest`, `ProjectSite`, `InteractiveMapTest`, `KpiCalculator`, `.parent`, `ProjectType`, `ReportController.php`, `StatusDef`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Are the 15 inferred relationships involving `User` (e.g. with `.handle()` and `.run()`) actually correct?**
   _`User` has 15 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 24 inferred relationships involving `ProjectSite` (e.g. with `.handle()` and `.calculateAverageCycleTime()`) actually correct?**
   _`ProjectSite` has 24 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `$schema`, `name`, `type` to the rest of the system?**
-  _241 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _245 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Illuminate\Database\Eloquent\Relations\BelongsTo` be split into smaller, more focused modules?**
-  _Cohesion score 0.05357142857142857 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06858826004628656 - nodes in this community are weakly interconnected._

@@ -8,6 +8,7 @@ use App\Domain\Audit\AuditLogger;
 use App\Domain\Portfolio\Program;
 use App\Domain\Portfolio\Project;
 use App\Domain\Portfolio\StatusDef;
+use App\Domain\Registry\Location;
 use App\Domain\Registry\ProjectSite;
 use App\Domain\Reporting\Export\ExcelReportGenerator;
 use App\Domain\Reporting\ReportSubscription;
@@ -34,7 +35,16 @@ class ReportController extends Controller
             abort(403, 'Unauthorized to view reports.');
         }
 
-        $filters = $request->only(['project_id', 'province_prefix', 'status', 'start_date', 'end_date']);
+        $filters = $request->only([
+            'project_id',
+            'province_prefix',
+            'district',
+            'municipality',
+            'barangay',
+            'status',
+            'start_date',
+            'end_date',
+        ]);
 
         $provinces = [
             ['name' => 'All Region 2', 'prefix' => ''],
@@ -44,6 +54,65 @@ class ReportController extends Controller
             ['name' => 'Nueva Vizcaya', 'prefix' => '0250'],
             ['name' => 'Quirino', 'prefix' => '0257'],
         ];
+
+        $districts = [
+            ['name' => 'Batanes Lone District', 'province' => 'Batanes', 'province_prefix' => '0209'],
+            ['name' => 'Cagayan 1st District', 'province' => 'Cagayan', 'province_prefix' => '0215'],
+            ['name' => 'Cagayan 2nd District', 'province' => 'Cagayan', 'province_prefix' => '0215'],
+            ['name' => 'Cagayan 3rd District', 'province' => 'Cagayan', 'province_prefix' => '0215'],
+            ['name' => 'Isabela 1st District', 'province' => 'Isabela', 'province_prefix' => '0231'],
+            ['name' => 'Isabela 2nd District', 'province' => 'Isabela', 'province_prefix' => '0231'],
+            ['name' => 'Isabela 3rd District', 'province' => 'Isabela', 'province_prefix' => '0231'],
+            ['name' => 'Isabela 4th District', 'province' => 'Isabela', 'province_prefix' => '0231'],
+            ['name' => 'Isabela 5th District', 'province' => 'Isabela', 'province_prefix' => '0231'],
+            ['name' => 'Isabela 6th District', 'province' => 'Isabela', 'province_prefix' => '0231'],
+            ['name' => 'Nueva Vizcaya Lone District', 'province' => 'Nueva Vizcaya', 'province_prefix' => '0250'],
+            ['name' => 'Quirino Lone District', 'province' => 'Quirino', 'province_prefix' => '0257'],
+        ];
+
+        // Preload geographic hierarchy metadata for cascading filters
+        $rawAddresses = Location::whereNotNull('address_details')->pluck('address_details');
+        $munis = [];
+        $bgys = [];
+        $provPrefixMap = [
+            'batanes' => '0209',
+            'cagayan' => '0215',
+            'isabela' => '0231',
+            'nueva vizcaya' => '0250',
+            'quirino' => '0257',
+        ];
+
+        foreach ($rawAddresses as $addr) {
+            $parts = array_map('trim', explode(',', $addr));
+            $bgy = $parts[0] ?? '';
+            $mun = $parts[1] ?? '';
+            $prov = $parts[2] ?? '';
+
+            if ($mun && $prov) {
+                $mKey = strtolower($prov . '|' . $mun);
+                if (!isset($munis[$mKey])) {
+                    $munis[$mKey] = [
+                        'name' => $mun,
+                        'province' => $prov,
+                        'province_prefix' => $provPrefixMap[strtolower($prov)] ?? '',
+                        'district' => Location::resolveDistrictName($mun, $prov),
+                    ];
+                }
+
+                if ($bgy) {
+                    $bKey = strtolower($mun . '|' . $bgy);
+                    if (!isset($bgys[$bKey])) {
+                        $bgys[$bKey] = [
+                            'name' => $bgy,
+                            'municipality' => $mun,
+                            'province' => $prov,
+                        ];
+                    }
+                }
+            }
+        }
+        usort($munis, fn($a, $b) => strcmp($a['name'], $b['name']));
+        usort($bgys, fn($a, $b) => strcmp($a['name'], $b['name']));
 
         $projects = Project::with('program')->get(['id', 'code', 'name', 'program_id']);
         $programs = Program::get(['id', 'name']);
@@ -63,11 +132,48 @@ class ReportController extends Controller
 
         $allSites = $query->get();
 
+        // 1. Province Filter
         if (!empty($filters['province_prefix'])) {
             $prefix = $filters['province_prefix'];
-            $allSites = $allSites->filter(function ($site) use ($prefix) {
+            $allSites = $allSites->filter(function ($site) use ($prefix, $provPrefixMap) {
                 $psgc = $site->resolvePsgcCode();
-                return $psgc && str_starts_with($psgc, $prefix);
+                if ($psgc && str_starts_with($psgc, $prefix)) return true;
+                $provName = strtolower(trim($site->location?->hierarchy['province'] ?? ''));
+                return ($provPrefixMap[$provName] ?? '') === $prefix;
+            });
+        }
+
+        // 2. Congressional District Filter
+        if (!empty($filters['district'])) {
+            $district = $filters['district'];
+            $allSites = $allSites->filter(function ($site) use ($district) {
+                $hier = $site->location?->hierarchy;
+                return ($hier['district'] ?? '') === $district;
+            });
+        }
+
+        // 3. Municipality / City Filter
+        if (!empty($filters['municipality'])) {
+            $muni = strtolower(trim($filters['municipality']));
+            $muniNorm = str_replace(['sta. ', 'sta ', 'sto. ', 'sto '], ['santa ', 'santa ', 'santo ', 'santo '], $muni);
+            $allSites = $allSites->filter(function ($site) use ($muni, $muniNorm) {
+                $hier = $site->location?->hierarchy;
+                $siteMuni = strtolower(trim($hier['municipality'] ?? ''));
+                $siteMuniNorm = str_replace(['sta. ', 'sta ', 'sto. ', 'sto '], ['santa ', 'santa ', 'santo ', 'santo '], $siteMuni);
+                return $siteMuni === $muni
+                    || $siteMuniNorm === $muniNorm
+                    || str_contains($siteMuni, $muni)
+                    || str_contains($siteMuniNorm, $muniNorm);
+            });
+        }
+
+        // 4. Barangay Filter
+        if (!empty($filters['barangay'])) {
+            $bgy = strtolower(trim($filters['barangay']));
+            $allSites = $allSites->filter(function ($site) use ($bgy) {
+                $hier = $site->location?->hierarchy;
+                $siteBgy = strtolower(trim($hier['barangay'] ?? ''));
+                return $siteBgy === $bgy || str_contains($siteBgy, $bgy);
             });
         }
 
@@ -77,15 +183,18 @@ class ReportController extends Controller
         $operationalPreview = $allSites->filter(fn($s) => $s->current_status === 'operational')->count();
         $accomplishmentRate = $totalPreview > 0 ? round(($completedPreview / $totalPreview) * 100, 1) : 0.0;
 
-        $previewRows = $allSites->take(25)->map(function ($site) {
+        $previewRows = $allSites->take(50)->map(function ($site) {
             $loc = $site->location;
             $hierarchy = $loc ? $loc->hierarchy : [];
             return [
                 'id' => $site->id,
                 'site_code' => $site->site_code ?? 'N/A',
                 'project_name' => $site->project?->name ?? 'Initiative',
+                'facility_name' => $loc?->name ?? 'Public Wi-Fi Site',
                 'province' => $hierarchy['province'] ?? 'Region 02',
+                'district' => $hierarchy['district'] ?? 'N/A',
                 'municipality' => $hierarchy['municipality'] ?? 'N/A',
+                'barangay' => $hierarchy['barangay'] ?? 'N/A',
                 'status' => $site->current_status,
                 'target_date' => $site->target_completion_date ? Carbon::parse($site->target_completion_date)->toDateString() : 'N/A',
             ];
@@ -99,6 +208,9 @@ class ReportController extends Controller
         return Inertia::render('Reports/Index', [
             'filters' => $filters,
             'provinces' => $provinces,
+            'districts' => $districts,
+            'municipalities' => array_values($munis),
+            'barangays' => array_values($bgys),
             'projects' => $projects,
             'programs' => $programs,
             'statuses' => $statuses,
@@ -130,7 +242,14 @@ class ReportController extends Controller
             abort(403, 'Unauthorized to export reports.');
         }
 
-        $filters = $request->only(['project_id', 'province_prefix', 'status']);
+        $filters = $request->only([
+            'project_id',
+            'province_prefix',
+            'district',
+            'municipality',
+            'barangay',
+            'status',
+        ]);
 
         $reportsDir = storage_path('app/exports');
         if (!File::isDirectory($reportsDir)) {

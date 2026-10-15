@@ -142,8 +142,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_actions_fortify_updateuserprofileinformation",
-      "community": 82,
-      "community_name": "UpdateUserProfileInformation.php",
+      "community": 2,
+      "community_name": "User",
       "norm_label": "updateuserprofileinformation.php"
     },
     {
@@ -153,8 +153,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "app_actions_fortify_updateuserprofileinformation_updateuserprofileinformation",
-      "community": 82,
-      "community_name": "UpdateUserProfileInformation.php",
+      "community": 2,
+      "community_name": "User",
       "norm_label": "updateuserprofileinformation"
     },
     {
@@ -164,8 +164,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_actions_fortify_updateuserprofileinformation_updateuserprofileinformation_update",
-      "community": 82,
-      "community_name": "UpdateUserProfileInformation.php",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".update()"
     },
     {
@@ -175,8 +175,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "app_actions_fortify_updateuserprofileinformation_updateuserprofileinformation_updateverifieduser",
-      "community": 82,
-      "community_name": "UpdateUserProfileInformation.php",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".updateverifieduser()"
     },
     {
@@ -186,8 +186,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_console_commands_dispatchreportscommand",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "dispatchreportscommand.php"
     },
     {
@@ -197,8 +197,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_console_commands_dispatchreportscommand_dispatchreportscommand",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "dispatchreportscommand"
     },
     {
@@ -208,8 +208,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "command",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "command"
     },
     {
@@ -219,8 +219,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "app_console_commands_dispatchreportscommand_dispatchreportscommand_handle",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".handle()"
     },
     {
@@ -230,8 +230,8 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "app_console_commands_dispatchreportscommand_dispatchreportscommand_shoulddispatch",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".shoulddispatch()"
     },
     {
@@ -241,8 +241,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "app_console_commands_dispatchreportscommand_php_carbon",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "carbon"
     },
     {
@@ -263,8 +263,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "app_console_commands_districtsimport_districtsimport",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": "districtsimport"
     },
     {
@@ -274,8 +274,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "app_console_commands_districtsimport_districtsimport_handle",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".handle()"
     },
     {
@@ -296,8 +296,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_console_commands_importfreewifidata_importfreewifidata",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "importfreewifidata"
     },
     {
@@ -307,8 +307,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "app_console_commands_importfreewifidata_importfreewifidata_handle",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".handle()"
     },
     {
@@ -373,8 +373,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_console_commands_rebuildrollupcommand",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "rebuildrollupcommand.php"
     },
     {
@@ -384,8 +384,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_console_commands_rebuildrollupcommand_rebuildrollupcommand",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "rebuildrollupcommand"
     },
     {
@@ -395,8 +395,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_console_commands_rebuildrollupcommand_rebuildrollupcommand_handle",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".handle()"
     },
     {
@@ -406,8 +406,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_domain_access_grantresolver",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "grantresolver.php"
     },
     {
@@ -417,8 +417,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "app_domain_access_grantresolver_grantresolver",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": "grantresolver"
     },
     {
@@ -428,8 +428,8 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "app_domain_access_grantresolver_grantresolver_allows",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".allows()"
     },
     {
@@ -439,8 +439,8 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "app_domain_access_grantresolver_grantresolver_requirestwofactor",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".requirestwofactor()"
     },
     {
@@ -615,8 +615,8 @@
       "source_location": "L241",
       "_origin": "ast",
       "id": "app_domain_analytics_kpicalculator_kpicalculator_calculategadmetrics",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".calculategadmetrics()"
     },
     {
@@ -670,8 +670,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "app_domain_analytics_rollupdaily_rollupdaily",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": "rollupdaily"
     },
     {
@@ -681,8 +681,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "app_domain_analytics_rollupdaily_rollupdaily_casts",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": ".casts()"
     },
     {
@@ -692,8 +692,8 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "app_domain_analytics_rollupdaily_rollupdaily_project",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": ".project()"
     },
     {
@@ -703,8 +703,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "app_domain_analytics_rollupdaily_rollupdaily_area",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": ".area()"
     },
     {
@@ -714,8 +714,8 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "app_domain_analytics_rollupdaily_rollupdaily_getcompletionrateattribute",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": ".getcompletionrateattribute()"
     },
     {
@@ -725,8 +725,8 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "app_domain_analytics_rollupdaily_rollupdaily_getoperationalrateattribute",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": ".getoperationalrateattribute()"
     },
     {
@@ -747,8 +747,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "app_domain_audit_auditlog_auditlog",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "auditlog"
     },
     {
@@ -758,8 +758,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "app_domain_audit_auditlog_auditlog_casts",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": ".casts()"
     },
     {
@@ -780,8 +780,8 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "app_domain_audit_auditlog_auditlog_user",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": ".user()"
     },
     {
@@ -791,8 +791,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_domain_audit_auditlogger",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "auditlogger.php"
     },
     {
@@ -802,8 +802,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "app_domain_audit_auditlogger_auditlogger",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "auditlogger"
     },
     {
@@ -813,8 +813,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_domain_audit_auditlogger_auditlogger_log",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": ".log()"
     },
     {
@@ -934,8 +934,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "app_domain_geo_congressionaldistrict_congressionaldistrict",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": "congressionaldistrict"
     },
     {
@@ -945,8 +945,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "app_domain_geo_congressionaldistrict_congressionaldistrict_province",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".province()"
     },
     {
@@ -956,8 +956,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_domain_geo_congressionaldistrict_congressionaldistrict_memberships",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".memberships()"
     },
     {
@@ -967,8 +967,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "app_domain_geo_congressionaldistrict_congressionaldistrict_activememberships",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".activememberships()"
     },
     {
@@ -1066,8 +1066,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "app_domain_geo_psgcarea_psgcarea_parent",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": ".parent()"
     },
     {
@@ -1297,8 +1297,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "app_domain_portfolio_program_program_projects",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".projects()"
     },
     {
@@ -1319,8 +1319,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "app_domain_portfolio_project_project",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 45,
+      "community_name": "InteractiveMapTest",
       "norm_label": "project"
     },
     {
@@ -1330,8 +1330,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "app_domain_portfolio_project_project_casts",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 45,
+      "community_name": "InteractiveMapTest",
       "norm_label": ".casts()"
     },
     {
@@ -1341,8 +1341,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "app_domain_portfolio_project_project_program",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 45,
+      "community_name": "InteractiveMapTest",
       "norm_label": ".program()"
     },
     {
@@ -1352,8 +1352,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "app_domain_portfolio_project_project_projecttype",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 45,
+      "community_name": "InteractiveMapTest",
       "norm_label": ".projecttype()"
     },
     {
@@ -1363,8 +1363,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "app_domain_portfolio_project_project_scopes",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".scopes()"
     },
     {
@@ -1374,8 +1374,8 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "app_domain_portfolio_project_project_indicatortargets",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".indicatortargets()"
     },
     {
@@ -1385,8 +1385,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "app_domain_portfolio_project_project_sites",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".sites()"
     },
     {
@@ -1396,8 +1396,8 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "app_domain_portfolio_project_project_dailyrollups",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".dailyrollups()"
     },
     {
@@ -1473,8 +1473,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "app_domain_portfolio_projecttype_projecttype_statusdefs",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".statusdefs()"
     },
     {
@@ -1484,8 +1484,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_domain_portfolio_projecttype_projecttype_interventiontypes",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".interventiontypes()"
     },
     {
@@ -1495,8 +1495,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "app_domain_portfolio_projecttype_projecttype_fielddefs",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".fielddefs()"
     },
     {
@@ -1506,8 +1506,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "app_domain_portfolio_projecttype_projecttype_projects",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".projects()"
     },
     {
@@ -1517,8 +1517,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "app_domain_portfolio_projecttype_projecttype_initialstatus",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".initialstatus()"
     },
     {
@@ -1528,8 +1528,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "app_domain_portfolio_projecttype_projecttype_completedstatuses",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".completedstatuses()"
     },
     {
@@ -1550,8 +1550,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_domain_portfolio_statusdef_statusdef",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 31,
+      "community_name": "StatusDef",
       "norm_label": "statusdef"
     },
     {
@@ -1561,8 +1561,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "app_domain_portfolio_statusdef_statusdef_casts",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 31,
+      "community_name": "StatusDef",
       "norm_label": ".casts()"
     },
     {
@@ -1572,8 +1572,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "app_domain_portfolio_statusdef_statusdef_projecttype",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 31,
+      "community_name": "StatusDef",
       "norm_label": ".projecttype()"
     },
     {
@@ -1583,8 +1583,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_domain_portfolio_statusworkflow",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": "statusworkflow.php"
     },
     {
@@ -1594,8 +1594,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "app_domain_portfolio_statusworkflow_statusworkflow",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": "statusworkflow"
     },
     {
@@ -1605,8 +1605,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "app_domain_portfolio_statusworkflow_statusworkflow_allowednext",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".allowednext()"
     },
     {
@@ -1616,8 +1616,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "app_domain_portfolio_statusworkflow_statusworkflow_cantransition",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".cantransition()"
     },
     {
@@ -1627,8 +1627,8 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "app_domain_portfolio_statusworkflow_statusworkflow_validateworkflow",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".validateworkflow()"
     },
     {
@@ -1638,8 +1638,8 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "app_domain_portfolio_statusworkflow_statusworkflow_calculateprogress",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".calculateprogress()"
     },
     {
@@ -1660,8 +1660,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "app_domain_registry_institution_institution",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "institution"
     },
     {
@@ -1671,8 +1671,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_domain_registry_institution_institution_area",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": ".area()"
     },
     {
@@ -1682,8 +1682,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "app_domain_registry_institution_institution_primarylocation",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": ".primarylocation()"
     },
     {
@@ -1693,8 +1693,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "app_domain_registry_institution_institution_projectsites",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": ".projectsites()"
     },
     {
@@ -1773,6 +1773,17 @@
       "community": 19,
       "community_name": ".parent",
       "norm_label": ".gethierarchyattribute()"
+    },
+    {
+      "label": ".resolveDistrictName()",
+      "file_type": "code",
+      "source_file": "app/Domain/Registry/Location.php",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "app_domain_registry_location_location_resolvedistrictname",
+      "community": 19,
+      "community_name": ".parent",
+      "norm_label": ".resolvedistrictname()"
     },
     {
       "label": "ProjectSite.php",
@@ -1869,8 +1880,8 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "app_domain_registry_projectsite_projectsite_interventions",
-      "community": 8,
-      "community_name": "ProjectSite",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".interventions()"
     },
     {
@@ -1880,8 +1891,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "app_domain_registry_projectsite_php_hasmany",
-      "community": 8,
-      "community_name": "ProjectSite",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "hasmany"
     },
     {
@@ -1935,8 +1946,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "app_domain_registry_siteimportservice_siteimportservice_import",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 4,
+      "community_name": "BoundaryValidator",
       "norm_label": ".import()"
     },
     {
@@ -1957,8 +1968,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_domain_reporting_attachment_attachment",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": "attachment"
     },
     {
@@ -1968,8 +1979,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_domain_reporting_attachment_attachment_casts",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": ".casts()"
     },
     {
@@ -1979,8 +1990,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "app_domain_reporting_attachment_attachment_fieldreport",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": ".fieldreport()"
     },
     {
@@ -2067,8 +2078,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "app_domain_reporting_export_excelreportgenerator_excelreportgenerator",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "excelreportgenerator"
     },
     {
@@ -2078,8 +2089,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "app_domain_reporting_export_excelreportgenerator_excelreportgenerator_construct",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".__construct()"
     },
     {
@@ -2089,8 +2100,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_domain_reporting_export_excelreportgenerator_excelreportgenerator_generatetofile",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".generatetofile()"
     },
     {
@@ -2166,8 +2177,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "app_domain_reporting_fieldreport_fieldreport_attachments",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".attachments()"
     },
     {
@@ -2177,8 +2188,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "app_domain_reporting_fieldreport_fieldreport_correctionrequests",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".correctionrequests()"
     },
     {
@@ -2199,8 +2210,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_domain_reporting_frauddetector_frauddetector",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": "frauddetector"
     },
     {
@@ -2210,8 +2221,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "app_domain_reporting_frauddetector_frauddetector_construct",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".__construct()"
     },
     {
@@ -2221,8 +2232,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "app_domain_reporting_frauddetector_frauddetector_evaluate",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": ".evaluate()"
     },
     {
@@ -2320,8 +2331,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "app_domain_reporting_reportsubscription_reportsubscription",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "reportsubscription"
     },
     {
@@ -2331,8 +2342,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "app_domain_reporting_reportsubscription_reportsubscription_casts",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".casts()"
     },
     {
@@ -2342,8 +2353,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "app_domain_reporting_reportsubscription_reportsubscription_user",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".user()"
     },
     {
@@ -2386,8 +2397,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_http_controllers_admin_auditcontroller_auditcontroller_index",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": ".index()"
     },
     {
@@ -2397,8 +2408,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_http_controllers_admin_geocontroller",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": "geocontroller.php"
     },
     {
@@ -2408,8 +2419,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_http_controllers_admin_geocontroller_geocontroller",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": "geocontroller"
     },
     {
@@ -2419,8 +2430,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_http_controllers_admin_geocontroller_geocontroller_index",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".index()"
     },
     {
@@ -2430,8 +2441,8 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "app_http_controllers_admin_geocontroller_geocontroller_barangays",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".barangays()"
     },
     {
@@ -2463,8 +2474,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_http_controllers_admin_projecttypecontroller_projecttypecontroller_construct",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".__construct()"
     },
     {
@@ -2738,8 +2749,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_http_controllers_map_mapcontroller",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "mapcontroller.php"
     },
     {
@@ -2760,8 +2771,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "app_http_controllers_map_mapcontroller_mapcontroller_construct",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".__construct()"
     },
     {
@@ -2804,8 +2815,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_http_controllers_portfolio_projectcontroller_projectcontroller_construct",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".__construct()"
     },
     {
@@ -2848,8 +2859,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_http_controllers_registry_institutioncontroller",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "institutioncontroller.php"
     },
     {
@@ -2870,8 +2881,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "app_http_controllers_registry_institutioncontroller_institutioncontroller_construct",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".__construct()"
     },
     {
@@ -2958,8 +2969,8 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "app_http_controllers_registry_sitecontroller_sitecontroller_store",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 45,
+      "community_name": "InteractiveMapTest",
       "norm_label": ".store()"
     },
     {
@@ -2991,96 +3002,96 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_reportcontroller",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "reportcontroller.php"
     },
     {
       "label": "ReportController",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_reportcontroller_reportcontroller",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "reportcontroller"
     },
     {
       "label": ".__construct()",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_reportcontroller_reportcontroller_construct",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".__construct()"
     },
     {
       "label": ".index()",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_reportcontroller_reportcontroller_index",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".index()"
     },
     {
       "label": ".exportExcel()",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L116",
+      "source_location": "L228",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_reportcontroller_reportcontroller_exportexcel",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".exportexcel()"
     },
     {
       "label": ".exportCsv()",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L121",
+      "source_location": "L233",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_reportcontroller_reportcontroller_exportcsv",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".exportcsv()"
     },
     {
       "label": ".exportFile()",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L126",
+      "source_location": "L238",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_reportcontroller_reportcontroller_exportfile",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".exportfile()"
     },
     {
       "label": ".storeSubscription()",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L154",
+      "source_location": "L273",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_reportcontroller_reportcontroller_storesubscription",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".storesubscription()"
     },
     {
       "label": ".destroySubscription()",
       "file_type": "code",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L182",
+      "source_location": "L301",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_reportcontroller_reportcontroller_destroysubscription",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".destroysubscription()"
     },
     {
@@ -3090,8 +3101,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_submissioncontroller",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "submissioncontroller.php"
     },
     {
@@ -3112,8 +3123,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_submissioncontroller_submissioncontroller_construct",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".__construct()"
     },
     {
@@ -3134,8 +3145,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "app_http_controllers_reporting_submissioncontroller_submissioncontroller_store",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": ".store()"
     },
     {
@@ -3167,8 +3178,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_http_middleware_ensuretwofactorenforced",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": "ensuretwofactorenforced.php"
     },
     {
@@ -3178,8 +3189,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "app_http_middleware_ensuretwofactorenforced_ensuretwofactorenforced",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": "ensuretwofactorenforced"
     },
     {
@@ -3189,8 +3200,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "app_http_middleware_ensuretwofactorenforced_ensuretwofactorenforced_construct",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".__construct()"
     },
     {
@@ -3200,8 +3211,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "app_http_middleware_ensuretwofactorenforced_ensuretwofactorenforced_handle",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".handle()"
     },
     {
@@ -3211,8 +3222,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "closure",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": "closure"
     },
     {
@@ -3222,8 +3233,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_http_middleware_handleinertiarequests",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": "handleinertiarequests.php"
     },
     {
@@ -3233,8 +3244,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "app_http_middleware_handleinertiarequests_handleinertiarequests",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": "handleinertiarequests"
     },
     {
@@ -3244,8 +3255,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "app_http_middleware_handleinertiarequests_handleinertiarequests_version",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": ".version()"
     },
     {
@@ -3255,8 +3266,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "app_http_middleware_handleinertiarequests_handleinertiarequests_share",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": ".share()"
     },
     {
@@ -3321,8 +3332,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "app_models_user_user",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": "user"
     },
     {
@@ -3332,8 +3343,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "app_models_user_user_casts",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".casts()"
     },
     {
@@ -3343,8 +3354,8 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "app_models_user_user_rolegrants",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".rolegrants()"
     },
     {
@@ -3354,8 +3365,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "app_models_user_user_issuperadmin",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".issuperadmin()"
     },
     {
@@ -3365,8 +3376,8 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "app_models_user_user_hasrole",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".hasrole()"
     },
     {
@@ -3464,8 +3475,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "artisan",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "artisan"
     },
     {
@@ -4212,8 +4223,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "config_auth",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "auth.php"
     },
     {
@@ -4773,8 +4784,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_seeders_databaseseeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "databaseseeder.php"
     },
     {
@@ -4784,8 +4795,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "database_seeders_databaseseeder_databaseseeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "databaseseeder"
     },
     {
@@ -4795,8 +4806,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "database_seeders_databaseseeder_databaseseeder_run",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": ".run()"
     },
     {
@@ -4817,8 +4828,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "database_seeders_demotelemetryseeder_demotelemetryseeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "demotelemetryseeder"
     },
     {
@@ -4828,8 +4839,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "database_seeders_demotelemetryseeder_demotelemetryseeder_run",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": ".run()"
     },
     {
@@ -4839,8 +4850,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_seeders_freewifirealdataseeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "freewifirealdataseeder.php"
     },
     {
@@ -4850,8 +4861,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "database_seeders_freewifirealdataseeder_freewifirealdataseeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "freewifirealdataseeder"
     },
     {
@@ -4861,8 +4872,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "database_seeders_freewifirealdataseeder_freewifirealdataseeder_run",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": ".run()"
     },
     {
@@ -4883,8 +4894,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "database_seeders_interventionseeder_interventionseeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": "interventionseeder"
     },
     {
@@ -4894,8 +4905,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "database_seeders_interventionseeder_interventionseeder_run",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": ".run()"
     },
     {
@@ -4916,8 +4927,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "database_seeders_portfolioseeder_portfolioseeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "portfolioseeder"
     },
     {
@@ -4927,8 +4938,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "database_seeders_portfolioseeder_portfolioseeder_run",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".run()"
     },
     {
@@ -4949,8 +4960,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "database_seeders_registryseeder_registryseeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "registryseeder"
     },
     {
@@ -4960,8 +4971,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "database_seeders_registryseeder_registryseeder_run",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": ".run()"
     },
     {
@@ -4982,8 +4993,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "database_seeders_userseeder_userseeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "userseeder"
     },
     {
@@ -7223,7 +7234,7 @@
       "label": "props",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L400",
+      "source_location": "L450",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_props",
       "community": 18,
@@ -7234,7 +7245,7 @@
       "label": "filterForm",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L431",
+      "source_location": "L493",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_filterform",
       "community": 18,
@@ -7242,10 +7253,76 @@
       "norm_label": "filterform"
     },
     {
+      "label": "filteredDistricts",
+      "file_type": "code",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L503",
+      "_origin": "ast",
+      "id": "resources_js_pages_reports_index_filtereddistricts",
+      "community": 18,
+      "community_name": "Reports/Index.vue",
+      "norm_label": "filtereddistricts"
+    },
+    {
+      "label": "filteredMunicipalities",
+      "file_type": "code",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L508",
+      "_origin": "ast",
+      "id": "resources_js_pages_reports_index_filteredmunicipalities",
+      "community": 18,
+      "community_name": "Reports/Index.vue",
+      "norm_label": "filteredmunicipalities"
+    },
+    {
+      "label": "filteredBarangays",
+      "file_type": "code",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L519",
+      "_origin": "ast",
+      "id": "resources_js_pages_reports_index_filteredbarangays",
+      "community": 18,
+      "community_name": "Reports/Index.vue",
+      "norm_label": "filteredbarangays"
+    },
+    {
+      "label": "onProvinceChange()",
+      "file_type": "code",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L534",
+      "_origin": "ast",
+      "id": "resources_js_pages_reports_index_onprovincechange",
+      "community": 18,
+      "community_name": "Reports/Index.vue",
+      "norm_label": "onprovincechange()"
+    },
+    {
+      "label": "onDistrictChange()",
+      "file_type": "code",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L541",
+      "_origin": "ast",
+      "id": "resources_js_pages_reports_index_ondistrictchange",
+      "community": 18,
+      "community_name": "Reports/Index.vue",
+      "norm_label": "ondistrictchange()"
+    },
+    {
+      "label": "onMunicipalityChange()",
+      "file_type": "code",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L547",
+      "_origin": "ast",
+      "id": "resources_js_pages_reports_index_onmunicipalitychange",
+      "community": 18,
+      "community_name": "Reports/Index.vue",
+      "norm_label": "onmunicipalitychange()"
+    },
+    {
       "label": "applyFilters()",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L437",
+      "source_location": "L552",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_applyfilters",
       "community": 18,
@@ -7256,7 +7333,7 @@
       "label": "resetFilters()",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L441",
+      "source_location": "L556",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_resetfilters",
       "community": 18,
@@ -7264,10 +7341,21 @@
       "norm_label": "resetfilters()"
     },
     {
+      "label": "activeGeoScope",
+      "file_type": "code",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L568",
+      "_origin": "ast",
+      "id": "resources_js_pages_reports_index_activegeoscope",
+      "community": 18,
+      "community_name": "Reports/Index.vue",
+      "norm_label": "activegeoscope"
+    },
+    {
       "label": "excelExportUrl",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L446",
+      "source_location": "L581",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_excelexporturl",
       "community": 18,
@@ -7278,7 +7366,7 @@
       "label": "csvExportUrl",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L454",
+      "source_location": "L592",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_csvexporturl",
       "community": 18,
@@ -7289,7 +7377,7 @@
       "label": "printDossier()",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L462",
+      "source_location": "L603",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_printdossier",
       "community": 18,
@@ -7300,7 +7388,7 @@
       "label": "formatStatusLabel()",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L466",
+      "source_location": "L607",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_formatstatuslabel",
       "community": 18,
@@ -7311,7 +7399,7 @@
       "label": "showModal",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L472",
+      "source_location": "L613",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_showmodal",
       "community": 18,
@@ -7322,7 +7410,7 @@
       "label": "recipientInput",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L473",
+      "source_location": "L614",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_recipientinput",
       "community": 18,
@@ -7333,7 +7421,7 @@
       "label": "subForm",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L474",
+      "source_location": "L615",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_subform",
       "community": 18,
@@ -7344,7 +7432,7 @@
       "label": "openSubscriptionModal()",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L482",
+      "source_location": "L623",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_opensubscriptionmodal",
       "community": 18,
@@ -7355,7 +7443,7 @@
       "label": "submitSubscription()",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L490",
+      "source_location": "L631",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_submitsubscription",
       "community": 18,
@@ -7366,7 +7454,7 @@
       "label": "cancelSubscription()",
       "file_type": "code",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L502",
+      "source_location": "L643",
       "_origin": "ast",
       "id": "resources_js_pages_reports_index_cancelsubscription",
       "community": 18,
@@ -8051,8 +8139,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_console",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "console.php"
     },
     {
@@ -8150,8 +8238,8 @@
       "source_location": "L234",
       "_origin": "ast",
       "id": "tests_feature_analyticsrolluptest_analyticsrolluptest_test_rebuild_rollup_command_and_job_populate_rollup_daily",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": ".test_rebuild_rollup_command_and_job_populate_rollup_daily()"
     },
     {
@@ -8172,8 +8260,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_authtest",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "authtest.php"
     },
     {
@@ -8183,8 +8271,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_feature_authtest_authtest",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": "authtest"
     },
     {
@@ -8194,8 +8282,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_feature_authtest_authtest_test_guest_is_redirected_to_login",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_guest_is_redirected_to_login()"
     },
     {
@@ -8205,8 +8293,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "tests_feature_authtest_authtest_test_user_can_view_login_page",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_user_can_view_login_page()"
     },
     {
@@ -8216,8 +8304,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_feature_authtest_authtest_test_user_can_authenticate_and_reach_dashboard",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_user_can_authenticate_and_reach_dashboard()"
     },
     {
@@ -8227,8 +8315,8 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "tests_feature_authtest_authtest_test_non_two_factor_user_authenticates_directly_to_dashboard",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_non_two_factor_user_authenticates_directly_to_dashboard()"
     },
     {
@@ -8238,8 +8326,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "tests_feature_authtest_authtest_test_unconfigured_privileged_user_is_redirected_to_two_factor_setup",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_unconfigured_privileged_user_is_redirected_to_two_factor_setup()"
     },
     {
@@ -8249,8 +8337,8 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "tests_feature_authtest_authtest_test_admin_can_view_users_and_create_grants",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_admin_can_view_users_and_create_grants()"
     },
     {
@@ -8260,8 +8348,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_exampletest",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "feature/exampletest.php"
     },
     {
@@ -8271,8 +8359,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_feature_exampletest_exampletest",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "exampletest"
     },
     {
@@ -8282,8 +8370,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_feature_exampletest_exampletest_test_the_application_returns_a_successful_response",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": ".test_the_application_returns_a_successful_response()"
     },
     {
@@ -8315,8 +8403,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_feature_fieldsubmissiontest_fieldsubmissiontest_setup",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": ".setup()"
     },
     {
@@ -8392,8 +8480,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_feature_freewifiimporttest_freewifiimporttest",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": "freewifiimporttest"
     },
     {
@@ -8403,8 +8491,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "tests_feature_freewifiimporttest_freewifiimporttest_setup",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": ".setup()"
     },
     {
@@ -8414,8 +8502,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "tests_feature_freewifiimporttest_freewifiimporttest_test_wifi_import_command_executes_successfully",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 8,
+      "community_name": "ProjectSite",
       "norm_label": ".test_wifi_import_command_executes_successfully()"
     },
     {
@@ -8425,8 +8513,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_geotest",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "geotest.php"
     },
     {
@@ -8436,8 +8524,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "tests_feature_geotest_geotest",
-      "community": 93,
-      "community_name": "GeoTest",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "geotest"
     },
     {
@@ -8447,8 +8535,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_feature_geotest_geotest_test_psgc_and_districts_import_commands_populate_region_2",
-      "community": 93,
-      "community_name": "GeoTest",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": ".test_psgc_and_districts_import_commands_populate_region_2()"
     },
     {
@@ -8458,8 +8546,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tests_feature_geotest_geotest_test_admin_can_access_geo_index_and_view_hierarchy",
-      "community": 93,
-      "community_name": "GeoTest",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": ".test_admin_can_access_geo_index_and_view_hierarchy()"
     },
     {
@@ -8469,8 +8557,8 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_feature_geotest_geotest_test_admin_can_fetch_barangays_for_lgu",
-      "community": 93,
-      "community_name": "GeoTest",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": ".test_admin_can_fetch_barangays_for_lgu()"
     },
     {
@@ -8480,8 +8568,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_interactivemaptest",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "interactivemaptest.php"
     },
     {
@@ -8546,8 +8634,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_projectcrudtest",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "projectcrudtest.php"
     },
     {
@@ -8557,8 +8645,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "tests_feature_projectcrudtest_projectcrudtest",
-      "community": 81,
-      "community_name": "ProjectCrudTest",
+      "community": 2,
+      "community_name": "User",
       "norm_label": "projectcrudtest"
     },
     {
@@ -8568,8 +8656,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "tests_feature_projectcrudtest_projectcrudtest_setup",
-      "community": 81,
-      "community_name": "ProjectCrudTest",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".setup()"
     },
     {
@@ -8579,8 +8667,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "tests_feature_projectcrudtest_projectcrudtest_test_authenticated_user_can_view_project_directory",
-      "community": 81,
-      "community_name": "ProjectCrudTest",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_authenticated_user_can_view_project_directory()"
     },
     {
@@ -8590,8 +8678,8 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "tests_feature_projectcrudtest_projectcrudtest_test_encoder_is_forbidden_from_creating_projects",
-      "community": 81,
-      "community_name": "ProjectCrudTest",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_encoder_is_forbidden_from_creating_projects()"
     },
     {
@@ -8601,8 +8689,8 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "tests_feature_projectcrudtest_projectcrudtest_test_project_manager_can_create_project_with_scopes_and_targets",
-      "community": 81,
-      "community_name": "ProjectCrudTest",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_project_manager_can_create_project_with_scopes_and_targets()"
     },
     {
@@ -8612,8 +8700,8 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "tests_feature_projectcrudtest_projectcrudtest_test_super_admin_can_manage_project_types_and_status_definitions",
-      "community": 81,
-      "community_name": "ProjectCrudTest",
+      "community": 2,
+      "community_name": "User",
       "norm_label": ".test_super_admin_can_manage_project_types_and_status_definitions()"
     },
     {
@@ -8623,8 +8711,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "reportingaudittest.php"
     },
     {
@@ -8634,8 +8722,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "reportingaudittest"
     },
     {
@@ -8645,107 +8733,118 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_setup",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".setup()"
     },
     {
       "label": ".test_guest_cannot_access_reports_or_audit()",
       "file_type": "code",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L95",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_test_guest_cannot_access_reports_or_audit",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".test_guest_cannot_access_reports_or_audit()"
     },
     {
       "label": ".test_authorized_user_can_view_reports_matrix_and_filter()",
       "file_type": "code",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L101",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_test_authorized_user_can_view_reports_matrix_and_filter",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".test_authorized_user_can_view_reports_matrix_and_filter()"
+    },
+    {
+      "label": ".test_authorized_user_can_filter_by_district_municipality_and_barangay()",
+      "file_type": "code",
+      "source_file": "tests/Feature/ReportingAuditTest.php",
+      "source_location": "L119",
+      "_origin": "ast",
+      "id": "tests_feature_reportingaudittest_reportingaudittest_test_authorized_user_can_filter_by_district_municipality_and_barangay",
+      "community": 15,
+      "community_name": "KpiCalculator",
+      "norm_label": ".test_authorized_user_can_filter_by_district_municipality_and_barangay()"
     },
     {
       "label": ".test_excel_report_export_generates_valid_xlsx_and_logs_audit()",
       "file_type": "code",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L117",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_test_excel_report_export_generates_valid_xlsx_and_logs_audit",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".test_excel_report_export_generates_valid_xlsx_and_logs_audit()"
     },
     {
       "label": ".test_csv_report_export_generates_valid_csv_and_logs_audit()",
       "file_type": "code",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L130",
+      "source_location": "L163",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_test_csv_report_export_generates_valid_csv_and_logs_audit",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".test_csv_report_export_generates_valid_csv_and_logs_audit()"
     },
     {
       "label": ".test_user_can_create_and_delete_report_subscription()",
       "file_type": "code",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L143",
+      "source_location": "L176",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_test_user_can_create_and_delete_report_subscription",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".test_user_can_create_and_delete_report_subscription()"
     },
     {
       "label": ".test_reports_dispatch_command_generates_reports_and_updates_last_dispatched()",
       "file_type": "code",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L174",
+      "source_location": "L207",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_test_reports_dispatch_command_generates_reports_and_updates_last_dispatched",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".test_reports_dispatch_command_generates_reports_and_updates_last_dispatched()"
     },
     {
       "label": ".test_audit_logs_are_append_only_and_throw_on_update_or_delete()",
       "file_type": "code",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L196",
+      "source_location": "L229",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_test_audit_logs_are_append_only_and_throw_on_update_or_delete",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".test_audit_logs_are_append_only_and_throw_on_update_or_delete()"
     },
     {
       "label": ".test_audit_logs_throw_on_delete()",
       "file_type": "code",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L209",
+      "source_location": "L242",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_test_audit_logs_throw_on_delete",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".test_audit_logs_throw_on_delete()"
     },
     {
       "label": ".test_super_admin_can_view_audit_trail_browser()",
       "file_type": "code",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L217",
+      "source_location": "L250",
       "_origin": "ast",
       "id": "tests_feature_reportingaudittest_reportingaudittest_test_super_admin_can_view_audit_trail_browser",
-      "community": 7,
-      "community_name": "ReportingAuditTest",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": ".test_super_admin_can_view_audit_trail_browser()"
     },
     {
@@ -8755,8 +8854,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_siteregistrytest",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "siteregistrytest.php"
     },
     {
@@ -8843,8 +8942,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_testcase",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "testcase.php"
     },
     {
@@ -8854,8 +8953,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_testcase_testcase",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "testcase"
     },
     {
@@ -8986,8 +9085,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "tests_unit_frauddetectortest_frauddetectortest",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": "frauddetectortest"
     },
     {
@@ -8997,8 +9096,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "tests_unit_frauddetectortest_frauddetectortest_setup",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": ".setup()"
     },
     {
@@ -9008,8 +9107,8 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "tests_unit_frauddetectortest_frauddetectortest_test_gps_within_500m_generates_no_flags",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": ".test_gps_within_500m_generates_no_flags()"
     },
     {
@@ -9019,8 +9118,8 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "tests_unit_frauddetectortest_frauddetectortest_test_gps_outside_500m_triggers_outside_proximity_flag",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": ".test_gps_outside_500m_triggers_outside_proximity_flag()"
     },
     {
@@ -9030,8 +9129,8 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "tests_unit_frauddetectortest_frauddetectortest_test_illegal_status_transition_triggers_flag",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": ".test_illegal_status_transition_triggers_flag()"
     },
     {
@@ -9041,8 +9140,8 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "tests_unit_frauddetectortest_frauddetectortest_test_duplicate_image_sha256_triggers_flag",
-      "community": 4,
-      "community_name": "BoundaryValidator",
+      "community": 6,
+      "community_name": "Intervention",
       "norm_label": ".test_duplicate_image_sha256_triggers_flag()"
     },
     {
@@ -9052,8 +9151,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_grantresolvertest",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": "grantresolvertest.php"
     },
     {
@@ -9063,8 +9162,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_unit_grantresolvertest_grantresolvertest",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": "grantresolvertest"
     },
     {
@@ -9074,8 +9173,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_unit_grantresolvertest_grantresolvertest_setup",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": ".setup()"
     },
     {
@@ -9085,8 +9184,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "tests_unit_grantresolvertest_grantresolvertest_test_super_admin_allows_any_action_and_location",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".test_super_admin_allows_any_action_and_location()"
     },
     {
@@ -9096,8 +9195,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_unit_grantresolvertest_grantresolvertest_test_hierarchical_psgc_prefix_matching",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".test_hierarchical_psgc_prefix_matching()"
     },
     {
@@ -9107,8 +9206,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "tests_unit_grantresolvertest_grantresolvertest_test_project_id_scoping",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".test_project_id_scoping()"
     },
     {
@@ -9118,8 +9217,8 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "tests_unit_grantresolvertest_grantresolvertest_test_privileged_roles_require_two_factor",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": ".test_privileged_roles_require_two_factor()"
     },
     {
@@ -9129,8 +9228,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_unit_statusworkflowtest",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "statusworkflowtest.php"
     },
     {
@@ -9140,8 +9239,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_unit_statusworkflowtest_statusworkflowtest",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 31,
+      "community_name": "StatusDef",
       "norm_label": "statusworkflowtest"
     },
     {
@@ -9151,8 +9250,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_unit_statusworkflowtest_statusworkflowtest_setup",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": ".setup()"
     },
     {
@@ -9162,8 +9261,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "tests_unit_statusworkflowtest_statusworkflowtest_test_initial_status_returns_first_by_sort_order",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 31,
+      "community_name": "StatusDef",
       "norm_label": ".test_initial_status_returns_first_by_sort_order()"
     },
     {
@@ -9173,8 +9272,8 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "tests_unit_statusworkflowtest_statusworkflowtest_test_explicit_next_keys_takes_precedence_over_sequence",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 31,
+      "community_name": "StatusDef",
       "norm_label": ".test_explicit_next_keys_takes_precedence_over_sequence()"
     },
     {
@@ -9184,8 +9283,8 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "tests_unit_statusworkflowtest_statusworkflowtest_test_workflow_validation_detects_unknown_next_keys_and_missing_completed_state",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 31,
+      "community_name": "StatusDef",
       "norm_label": ".test_workflow_validation_detects_unknown_next_keys_and_missing_completed_state()"
     },
     {
@@ -9195,8 +9294,8 @@
       "source_location": "L117",
       "_origin": "ast",
       "id": "tests_unit_statusworkflowtest_statusworkflowtest_test_calculate_progress_percentage",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 31,
+      "community_name": "StatusDef",
       "norm_label": ".test_calculate_progress_percentage()"
     },
     {
@@ -9261,8 +9360,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "deployment",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "deployment.md"
     },
     {
@@ -9272,8 +9371,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "deployment_dict_region_2_infrastructure_program_rollout_monitoring_platform",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "dict region 2 infrastructure & program rollout monitoring platform"
     },
     {
@@ -9283,8 +9382,8 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "deployment_enterprise_deployment_operations_guide_deployment_md",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "enterprise deployment & operations guide (`deployment.md`)"
     },
     {
@@ -9294,8 +9393,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "deployment_1_prerequisites_required_php_extensions",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "1. prerequisites & required php extensions"
     },
     {
@@ -9305,8 +9404,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "deployment_2_initial_setup_database_provisioning",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "2. initial setup & database provisioning"
     },
     {
@@ -9316,8 +9415,8 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "deployment_3_background_queue_worker_supervisor",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "3. background queue worker (supervisor)"
     },
     {
@@ -9327,8 +9426,8 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "deployment_4_automated_scheduled_cron_tasks",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "4. automated scheduled cron tasks"
     },
     {
@@ -9338,8 +9437,8 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "deployment_5_nginx_web_server_configuration",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "5. nginx web server configuration"
     },
     {
@@ -9349,8 +9448,8 @@
       "source_location": "L174",
       "_origin": "ast",
       "id": "deployment_6_append_only_integrity_security_auditing",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "6. append-only integrity & security auditing"
     },
     {
@@ -9360,8 +9459,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "plan",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "plan.md"
     },
     {
@@ -9470,8 +9569,8 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "plan_plan_2_authentication_scoped_rbac_2fa_engine",
-      "community": 85,
-      "community_name": "Plan#2: Authentication, Scoped RBAC & 2FA Engine",
+      "community": 80,
+      "community_name": "DICT Region 2 Infrastructure & Program Rollout Monitoring Platform",
       "norm_label": "plan#2: authentication, scoped rbac & 2fa engine"
     },
     {
@@ -9481,8 +9580,8 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "plan_objective_82",
-      "community": 85,
-      "community_name": "Plan#2: Authentication, Scoped RBAC & 2FA Engine",
+      "community": 80,
+      "community_name": "DICT Region 2 Infrastructure & Program Rollout Monitoring Platform",
       "norm_label": "objective"
     },
     {
@@ -9492,8 +9591,8 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "plan_database_schema",
-      "community": 85,
-      "community_name": "Plan#2: Authentication, Scoped RBAC & 2FA Engine",
+      "community": 80,
+      "community_name": "DICT Region 2 Infrastructure & Program Rollout Monitoring Platform",
       "norm_label": "database schema"
     },
     {
@@ -9503,8 +9602,8 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "plan_logic_services",
-      "community": 85,
-      "community_name": "Plan#2: Authentication, Scoped RBAC & 2FA Engine",
+      "community": 80,
+      "community_name": "DICT Region 2 Infrastructure & Program Rollout Monitoring Platform",
       "norm_label": "logic & services"
     },
     {
@@ -9514,8 +9613,8 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "plan_verification_acceptance_criteria_107",
-      "community": 85,
-      "community_name": "Plan#2: Authentication, Scoped RBAC & 2FA Engine",
+      "community": 80,
+      "community_name": "DICT Region 2 Infrastructure & Program Rollout Monitoring Platform",
       "norm_label": "verification & acceptance criteria"
     },
     {
@@ -9965,8 +10064,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme",
-      "community": 12,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+      "community": 7,
+      "community_name": "ReportingAuditTest",
       "norm_label": "readme.md"
     },
     {
@@ -10284,8 +10383,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "laravel_fortify_contracts_updatesuserprofileinformation",
-      "community": 82,
-      "community_name": "UpdateUserProfileInformation.php",
+      "community": 2,
+      "community_name": "User",
       "norm_label": "laravel\\fortify\\contracts\\updatesuserprofileinformation"
     },
     {
@@ -10306,8 +10405,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_console_command",
-      "community": 32,
-      "community_name": "StatusWorkflow",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "illuminate\\console\\command"
     },
     {
@@ -10350,8 +10449,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_database_eloquent_relations_hasmany",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": "illuminate\\database\\eloquent\\relations\\hasmany"
     },
     {
@@ -10372,8 +10471,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_database_eloquent_softdeletes",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 45,
+      "community_name": "InteractiveMapTest",
       "norm_label": "illuminate\\database\\eloquent\\softdeletes"
     },
     {
@@ -10416,8 +10515,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_http_jsonresponse",
-      "community": 1,
-      "community_name": "Illuminate\\Http\\Request",
+      "community": 5,
+      "community_name": "PsgcArea",
       "norm_label": "illuminate\\http\\jsonresponse"
     },
     {
@@ -10438,8 +10537,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "symfony_component_httpfoundation_binaryfileresponse",
-      "community": 27,
-      "community_name": "ReportController.php",
+      "community": 15,
+      "community_name": "KpiCalculator",
       "norm_label": "symfony\\component\\httpfoundation\\binaryfileresponse"
     },
     {
@@ -10449,8 +10548,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "symfony_component_httpfoundation_response",
-      "community": 31,
-      "community_name": "StatusDef",
+      "community": 1,
+      "community_name": "Illuminate\\Http\\Request",
       "norm_label": "symfony\\component\\httpfoundation\\response"
     },
     {
@@ -10460,8 +10559,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "inertia_middleware",
-      "community": 19,
-      "community_name": ".parent",
+      "community": 27,
+      "community_name": "ReportController.php",
       "norm_label": "inertia\\middleware"
     },
     {
@@ -10526,8 +10625,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_notifications_notifiable",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": "illuminate\\notifications\\notifiable"
     },
     {
@@ -10537,8 +10636,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "laravel_fortify_twofactorauthenticatable",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": "laravel\\fortify\\twofactorauthenticatable"
     },
     {
@@ -10548,8 +10647,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_foundation_auth_user",
-      "community": 23,
-      "community_name": "ProjectType",
+      "community": 2,
+      "community_name": "User",
       "norm_label": "illuminate\\foundation\\auth\\user"
     },
     {
@@ -10592,8 +10691,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_database_seeder",
-      "community": 0,
-      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+      "community": 23,
+      "community_name": "ProjectType",
       "norm_label": "illuminate\\database\\seeder"
     },
     {
@@ -10603,8 +10702,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_foundation_testing_refreshdatabase",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "illuminate\\foundation\\testing\\refreshdatabase"
     },
     {
@@ -10614,8 +10713,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_foundation_testing_testcase",
-      "community": 36,
-      "community_name": "RollupDaily",
+      "community": 0,
+      "community_name": "Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
       "norm_label": "illuminate\\foundation\\testing\\testcase"
     },
     {
@@ -12320,7 +12419,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
@@ -12332,7 +12431,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -13053,7 +13152,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
@@ -13065,7 +13164,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -13951,7 +14050,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L191",
+      "source_location": "L310",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_destroysubscription",
@@ -13963,7 +14062,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L146",
+      "source_location": "L265",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_exportfile",
@@ -13975,7 +14074,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L177",
+      "source_location": "L296",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_storesubscription",
@@ -13987,7 +14086,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L198",
+      "source_location": "L231",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest_test_audit_logs_are_append_only_and_throw_on_update_or_delete",
@@ -13999,7 +14098,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L211",
+      "source_location": "L244",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest_test_audit_logs_throw_on_delete",
@@ -14011,7 +14110,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L219",
+      "source_location": "L252",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest_test_super_admin_can_view_audit_trail_browser",
@@ -15917,7 +16016,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L49",
+      "source_location": "L118",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_index",
@@ -16662,7 +16761,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L48",
+      "source_location": "L117",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_index",
@@ -18118,7 +18217,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L50",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_index",
@@ -18788,6 +18887,18 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "app/Http/Controllers/Reporting/ReportController.php",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_http_controllers_reporting_reportcontroller",
+      "target": "app_domain_registry_location",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "database/seeders/DemoTelemetrySeeder.php",
       "source_location": "L12",
       "weight": 1.0,
@@ -18948,6 +19059,17 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Domain/Registry/Location.php",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_domain_registry_location_location",
+      "target": "app_domain_registry_location_location_resolvedistrictname",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "mixes_in",
       "confidence": "EXTRACTED",
       "source_file": "app/Domain/Registry/Location.php",
@@ -19027,6 +19149,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_registry_sitecontroller_sitecontroller_store",
+      "target": "app_domain_registry_location_location"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/Http/Controllers/Reporting/ReportController.php",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_index",
       "target": "app_domain_registry_location_location"
     },
     {
@@ -19321,7 +19455,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller",
@@ -19648,7 +19782,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L53",
+      "source_location": "L122",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_index",
@@ -19875,7 +20009,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L86",
+      "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest_setup",
@@ -20433,7 +20567,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller",
@@ -20444,7 +20578,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
@@ -20456,7 +20590,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -21473,7 +21607,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller",
@@ -21484,7 +21618,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L182",
+      "source_location": "L301",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -21497,7 +21631,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L95",
+      "source_location": "L204",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_index",
@@ -21509,7 +21643,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L167",
+      "source_location": "L286",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_storesubscription",
@@ -21522,7 +21656,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L176",
+      "source_location": "L209",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest_test_reports_dispatch_command_generates_reports_and_updates_last_dispatched",
@@ -21534,7 +21668,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L162",
+      "source_location": "L195",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest_test_user_can_create_and_delete_report_subscription",
@@ -22707,7 +22841,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller",
@@ -22718,7 +22852,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller",
@@ -23369,7 +23503,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller",
@@ -23381,23 +23515,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller",
       "target": "illuminate_http_request",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L19",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_http_controllers_reporting_reportcontroller",
-      "target": "inertia_response",
       "confidence_score": 1.0
     },
     {
@@ -23409,6 +23531,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller",
+      "target": "inertia_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Http/Controllers/Reporting/ReportController.php",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_http_controllers_reporting_reportcontroller",
       "target": "symfony_component_httpfoundation_binaryfileresponse",
       "confidence_score": 1.0
     },
@@ -23416,7 +23550,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller",
@@ -23427,7 +23561,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L182",
+      "source_location": "L301",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller",
@@ -23438,7 +23572,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L121",
+      "source_location": "L233",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller",
@@ -23449,7 +23583,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L116",
+      "source_location": "L228",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller",
@@ -23460,7 +23594,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L126",
+      "source_location": "L238",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller",
@@ -23471,7 +23605,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller",
@@ -23482,7 +23616,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L154",
+      "source_location": "L273",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller",
@@ -23493,7 +23627,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -23505,7 +23639,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -23518,7 +23652,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L118",
+      "source_location": "L230",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_exportexcel",
@@ -23529,7 +23663,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L116",
+      "source_location": "L228",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -23541,7 +23675,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L116",
+      "source_location": "L228",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -23554,7 +23688,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L123",
+      "source_location": "L235",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_http_controllers_reporting_reportcontroller_reportcontroller_exportcsv",
@@ -23565,7 +23699,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L121",
+      "source_location": "L233",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -23577,7 +23711,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L121",
+      "source_location": "L233",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -23589,7 +23723,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L126",
+      "source_location": "L238",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -23601,7 +23735,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L126",
+      "source_location": "L238",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -23613,7 +23747,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Http/Controllers/Reporting/ReportController.php",
-      "source_location": "L154",
+      "source_location": "L273",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -28679,7 +28813,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L437",
+      "source_location": "L568",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index",
+      "target": "resources_js_pages_reports_index_activegeoscope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L552",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28690,7 +28835,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L502",
+      "source_location": "L643",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28701,7 +28846,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L454",
+      "source_location": "L592",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28712,7 +28857,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L446",
+      "source_location": "L581",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28723,7 +28868,40 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L431",
+      "source_location": "L519",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index",
+      "target": "resources_js_pages_reports_index_filteredbarangays",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L503",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index",
+      "target": "resources_js_pages_reports_index_filtereddistricts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L508",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index",
+      "target": "resources_js_pages_reports_index_filteredmunicipalities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L493",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28734,7 +28912,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L466",
+      "source_location": "L607",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28745,7 +28923,40 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L482",
+      "source_location": "L541",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index",
+      "target": "resources_js_pages_reports_index_ondistrictchange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L547",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index",
+      "target": "resources_js_pages_reports_index_onmunicipalitychange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L534",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index",
+      "target": "resources_js_pages_reports_index_onprovincechange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L623",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28756,7 +28967,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L462",
+      "source_location": "L603",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28767,7 +28978,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L400",
+      "source_location": "L450",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28778,7 +28989,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L473",
+      "source_location": "L614",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28789,7 +29000,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L441",
+      "source_location": "L556",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28800,7 +29011,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L472",
+      "source_location": "L613",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28811,7 +29022,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L474",
+      "source_location": "L615",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
@@ -28822,11 +29033,47 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resources/js/Pages/Reports/Index.vue",
-      "source_location": "L490",
+      "source_location": "L631",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resources_js_pages_reports_index",
       "target": "resources_js_pages_reports_index_submitsubscription",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L538",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index_onprovincechange",
+      "target": "resources_js_pages_reports_index_applyfilters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L544",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index_ondistrictchange",
+      "target": "resources_js_pages_reports_index_applyfilters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "resources/js/Pages/Reports/Index.vue",
+      "source_location": "L549",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resources_js_pages_reports_index_onmunicipalitychange",
+      "target": "resources_js_pages_reports_index_applyfilters",
       "confidence_score": 1.0
     },
     {
@@ -30293,7 +30540,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L196",
+      "source_location": "L229",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest",
@@ -30304,7 +30551,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L209",
+      "source_location": "L242",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest",
@@ -30315,7 +30562,18 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L101",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_feature_reportingaudittest_reportingaudittest",
+      "target": "tests_feature_reportingaudittest_reportingaudittest_test_authorized_user_can_filter_by_district_municipality_and_barangay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/Feature/ReportingAuditTest.php",
+      "source_location": "L102",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest",
@@ -30326,7 +30584,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L130",
+      "source_location": "L163",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest",
@@ -30337,7 +30595,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L117",
+      "source_location": "L150",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest",
@@ -30348,7 +30606,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L95",
+      "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest",
@@ -30359,7 +30617,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L174",
+      "source_location": "L207",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest",
@@ -30370,7 +30628,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L217",
+      "source_location": "L250",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest",
@@ -30381,7 +30639,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/ReportingAuditTest.php",
-      "source_location": "L143",
+      "source_location": "L176",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_reportingaudittest_reportingaudittest",
@@ -32007,5 +32265,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "de488aad67c726649bcfbe364acaea230c94ad7c"
+  "built_at_commit": "475670c66876dd6580c363f7f5ec9a4bf5c11614"
 }

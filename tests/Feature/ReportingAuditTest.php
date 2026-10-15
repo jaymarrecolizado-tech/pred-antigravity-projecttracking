@@ -81,6 +81,7 @@ class ReportingAuditTest extends TestCase
             'psgc_barangay' => '021528001',
             'lat' => 17.6132,
             'lng' => 121.7270,
+            'address_details' => 'Centro 01, Tuguegarao City, Cagayan',
         ]);
 
         $this->site = ProjectSite::create([
@@ -111,6 +112,38 @@ class ReportingAuditTest extends TestCase
             ->where('matrix.accomplishment_rate', 100)
             ->has('projects', 1)
             ->has('provinces', 6)
+            ->has('districts', 12)
+        );
+    }
+
+    public function test_authorized_user_can_filter_by_district_municipality_and_barangay(): void
+    {
+        // 1. Filter by Congressional District
+        $respDistrict = $this->actingAs($this->viewer)->get('/reports?district=' . urlencode('Cagayan 3rd District'));
+        $respDistrict->assertStatus(200);
+        $respDistrict->assertInertia(fn (Assert $page) => $page
+            ->where('matrix.total_sites', 1)
+        );
+
+        // Filter by non-matching district
+        $respWrongDistrict = $this->actingAs($this->viewer)->get('/reports?district=' . urlencode('Batanes Lone District'));
+        $respWrongDistrict->assertStatus(200);
+        $respWrongDistrict->assertInertia(fn (Assert $page) => $page
+            ->where('matrix.total_sites', 0)
+        );
+
+        // 2. Filter by Municipality
+        $respMuni = $this->actingAs($this->viewer)->get('/reports?municipality=Tuguegarao');
+        $respMuni->assertStatus(200);
+        $respMuni->assertInertia(fn (Assert $page) => $page
+            ->where('matrix.total_sites', 1)
+        );
+
+        // 3. Filter by Barangay
+        $respBgy = $this->actingAs($this->viewer)->get('/reports?barangay=Centro');
+        $respBgy->assertStatus(200);
+        $respBgy->assertInertia(fn (Assert $page) => $page
+            ->where('matrix.total_sites', 1)
         );
     }
 

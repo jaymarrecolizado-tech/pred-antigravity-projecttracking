@@ -44,12 +44,53 @@ class ExcelReportGenerator
 
         $sites = $query->get();
 
-        // If province filter is applied, filter in collection or via location
+        // Geographic and status filters
         if (!empty($filters['province_prefix'])) {
             $prefix = $filters['province_prefix'];
             $sites = $sites->filter(function ($site) use ($prefix) {
                 $psgc = $site->resolvePsgcCode();
-                return $psgc && str_starts_with($psgc, $prefix);
+                if ($psgc && str_starts_with($psgc, $prefix)) return true;
+                $provName = $site->location?->hierarchy['province'] ?? '';
+                $pPrefix = match (strtolower(trim($provName))) {
+                    'batanes' => '0209',
+                    'cagayan' => '0215',
+                    'isabela' => '0231',
+                    'nueva vizcaya' => '0250',
+                    'quirino' => '0257',
+                    default => '',
+                };
+                return $pPrefix === $prefix;
+            });
+        }
+
+        if (!empty($filters['district'])) {
+            $district = $filters['district'];
+            $sites = $sites->filter(function ($site) use ($district) {
+                $hier = $site->location?->hierarchy;
+                return ($hier['district'] ?? '') === $district;
+            });
+        }
+
+        if (!empty($filters['municipality'])) {
+            $muni = strtolower(trim($filters['municipality']));
+            $muniNorm = str_replace(['sta. ', 'sta ', 'sto. ', 'sto '], ['santa ', 'santa ', 'santo ', 'santo '], $muni);
+            $sites = $sites->filter(function ($site) use ($muni, $muniNorm) {
+                $hier = $site->location?->hierarchy;
+                $siteMuni = strtolower(trim($hier['municipality'] ?? ''));
+                $siteMuniNorm = str_replace(['sta. ', 'sta ', 'sto. ', 'sto '], ['santa ', 'santa ', 'santo ', 'santo '], $siteMuni);
+                return $siteMuni === $muni
+                    || $siteMuniNorm === $muniNorm
+                    || str_contains($siteMuni, $muni)
+                    || str_contains($siteMuniNorm, $muniNorm);
+            });
+        }
+
+        if (!empty($filters['barangay'])) {
+            $bgy = strtolower(trim($filters['barangay']));
+            $sites = $sites->filter(function ($site) use ($bgy) {
+                $hier = $site->location?->hierarchy;
+                $siteBgy = strtolower(trim($hier['barangay'] ?? ''));
+                return $siteBgy === $bgy || str_contains($siteBgy, $bgy);
             });
         }
 
@@ -74,6 +115,7 @@ class ExcelReportGenerator
             'Location Name',
             'Facility Type',
             'Province',
+            'Congressional District',
             'Municipality / City',
             'Barangay',
             'Current Status',
@@ -96,6 +138,7 @@ class ExcelReportGenerator
                 $loc?->name ?? 'Public Wi-Fi Site',
                 strtoupper($loc?->category ?? 'OTHER'),
                 $hierarchy['province'] ?? 'Region 02',
+                $hierarchy['district'] ?? 'N/A',
                 $hierarchy['municipality'] ?? 'N/A',
                 $hierarchy['barangay'] ?? 'N/A',
                 strtoupper(str_replace('_', ' ', $site->current_status)),
