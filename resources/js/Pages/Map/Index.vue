@@ -1,90 +1,128 @@
 <template>
     <AppShell>
         <div class="map-page-wrapper">
-            <!-- Floating Top Control Ribbon (NMS Reference) -->
-            <div class="map-floating-ribbon">
-                <div class="ribbon-metric-pill">
-                    <span class="ribbon-label" style="color: var(--c-primary); font-weight: 800;">RECON GIS</span>
-                    <span class="ribbon-val">{{ activePointsCount }} / {{ summary.total_sites }}</span>
+            <!-- Floating Clean Top-Left Status & Filter Capsule -->
+            <div class="map-floating-capsule">
+                <div class="capsule-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-primary)" stroke-width="2.2">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
                 </div>
-
-                <div class="ribbon-divider"></div>
-
-                <!-- Metric Selector -->
-                <div class="ribbon-control-group">
-                    <label class="ribbon-label">METRIC</label>
-                    <select v-model="selectedMetric" class="ribbon-select">
-                        <option value="completion">Completion Rate %</option>
-                        <option value="operational">Operational / Online Rate %</option>
-                    </select>
+                <div class="capsule-info">
+                    <div class="capsule-title">RECON Regional Map</div>
+                    <div class="capsule-subtitle">{{ activePointsCount }} of {{ summary.total_sites }} Sites Active</div>
                 </div>
-
-                <div class="ribbon-divider"></div>
-
-                <!-- Basemap Selector -->
-                <div class="ribbon-control-group">
-                    <label class="ribbon-label">BASEMAP</label>
-                    <select v-model="selectedBasemap" class="ribbon-select" title="Switch map basemap style">
-                        <option value="canvas">Clean Canvas (No Watermark)</option>
-                        <option value="osm">OpenStreetMap</option>
-                        <option value="satellite">Satellite Imagery</option>
-                    </select>
-                </div>
-
-                <div class="ribbon-divider"></div>
-
-                <!-- Merge <---> Detail Granularity Slider (NMS Reference) -->
-                <div class="ribbon-control-group slider-group">
-                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                        <span class="ribbon-label">GRANULARITY</span>
-                        <span class="ribbon-sublabel">Merge ←→ Detail</span>
-                    </div>
-                    <input
-                        type="range"
-                        min="35"
-                        max="115"
-                        step="5"
-                        v-model.number="granularitySlider"
-                        class="ribbon-slider"
-                        title="Adjust cluster merge distance"
-                    />
-                </div>
-
-                <div class="ribbon-divider"></div>
-
-                <!-- Cluster Mode Toggle -->
-                <div class="tabs-nav ribbon-tabs">
-                    <button
-                        type="button"
-                        class="tab-btn"
-                        :class="{ active: clusterMode === 'distance' }"
-                        @click="clusterMode = 'distance'"
-                    >
-                        Distance Supercluster
-                    </button>
-                    <button
-                        type="button"
-                        class="tab-btn"
-                        :class="{ active: clusterMode === 'admin' }"
-                        @click="clusterMode = 'admin'"
-                    >
-                        Admin Rollup
-                    </button>
-                </div>
-
-                <div class="ribbon-divider"></div>
-
-                <!-- Filter Drawer Toggle Button -->
                 <button
-                    class="btn btn-secondary btn-sm ribbon-filter-btn"
-                    :class="{ 'btn-primary': selectedProjectIds.length > 0 }"
+                    class="btn btn-sm"
+                    :class="selectedProjectIds.length < projects.length ? 'btn-primary' : 'btn-secondary'"
+                    style="border-radius: var(--radius-full); padding: 0.35rem 0.75rem; font-size: 0.76rem;"
                     @click="showFilterDrawer = !showFilterDrawer"
                 >
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                     </svg>
-                    <span>Portfolio Filter ({{ selectedProjectIds.length }}/{{ projects.length }})</span>
+                    <span>Filter ({{ selectedProjectIds.length }}/{{ projects.length }})</span>
                 </button>
+            </div>
+
+            <!-- Floating Clean Top-Right Layers & Settings -->
+            <div class="map-floating-settings">
+                <button 
+                    class="btn btn-secondary btn-sm map-settings-btn"
+                    @click="showSettingsModal = !showSettingsModal"
+                    title="Map display & basemap options"
+                >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span>Map Layers & View</span>
+                </button>
+
+                <!-- Clean Settings Popover -->
+                <div v-if="showSettingsModal" class="map-settings-popover">
+                    <div class="popover-header">
+                        <h4>Map Display Settings</h4>
+                        <button class="btn btn-ghost btn-sm" @click="showSettingsModal = false">✕</button>
+                    </div>
+
+                    <div class="popover-section">
+                        <label class="popover-label">Basemap Style</label>
+                        <div class="basemap-pill-group">
+                            <button 
+                                type="button" 
+                                class="pill-btn" 
+                                :class="{ active: selectedBasemap === 'canvas' }"
+                                @click="selectedBasemap = 'canvas'"
+                            >
+                                🗺️ Minimal Canvas
+                            </button>
+                            <button 
+                                type="button" 
+                                class="pill-btn" 
+                                :class="{ active: selectedBasemap === 'osm' }"
+                                @click="selectedBasemap = 'osm'"
+                            >
+                                🛣️ Street Map
+                            </button>
+                            <button 
+                                type="button" 
+                                class="pill-btn" 
+                                :class="{ active: selectedBasemap === 'satellite' }"
+                                @click="selectedBasemap = 'satellite'"
+                            >
+                                🛰️ Satellite
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="popover-section">
+                        <label class="popover-label">Color Status Metric</label>
+                        <select v-model="selectedMetric" class="form-input" style="font-size: 0.8rem;">
+                            <option value="completion">Completion Rate %</option>
+                            <option value="operational">Operational / Online Rate %</option>
+                        </select>
+                    </div>
+
+                    <div class="popover-section">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.2rem;">
+                            <label class="popover-label" style="margin: 0;">Marker Grouping</label>
+                            <span style="font-size: 0.72rem; color: var(--c-ink-muted);">Spread ←→ Merge</span>
+                        </div>
+                        <input
+                            type="range"
+                            min="35"
+                            max="115"
+                            step="5"
+                            v-model.number="granularitySlider"
+                            class="ribbon-slider"
+                        />
+                    </div>
+
+                    <div class="popover-section">
+                        <label class="popover-label">Grouping Mode</label>
+                        <div class="basemap-pill-group">
+                            <button 
+                                type="button" 
+                                class="pill-btn" 
+                                :class="{ active: clusterMode === 'distance' }"
+                                @click="clusterMode = 'distance'"
+                            >
+                                Smart Clusters
+                            </button>
+                            <button 
+                                type="button" 
+                                class="pill-btn" 
+                                :class="{ active: clusterMode === 'admin' }"
+                                @click="clusterMode = 'admin'"
+                            >
+                                By Province
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Leaflet Map Canvas -->
@@ -301,6 +339,7 @@ const selectedBasemap = ref('canvas');
 const granularitySlider = ref(75);
 const clusterMode = ref('distance');
 const showFilterDrawer = ref(false);
+const showSettingsModal = ref(false);
 const selectedProjectIds = ref(
     props.initialFocus.project_id ? [props.initialFocus.project_id] : props.projects.map(p => p.id)
 );
@@ -374,72 +413,145 @@ function onSiteSelected(siteProps) {
     overflow: hidden;
 }
 
-/* Floating Top Control Ribbon (NMS-V2 reference design) */
-.map-floating-ribbon {
+/* Floating Clean Top-Left Status & Filter Capsule */
+.map-floating-capsule {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    right: 1rem;
     background: var(--c-surface);
     border: 1px solid var(--c-border);
-    border-radius: var(--radius-lg);
-    padding: 0.65rem 1rem;
+    border-radius: var(--radius-full);
+    padding: 0.45rem 0.65rem 0.45rem 0.95rem;
     box-shadow: var(--shadow-md);
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 0.85rem;
+    pointer-events: auto;
+    backdrop-filter: blur(10px);
+}
+
+.capsule-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.capsule-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.capsule-title {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--c-ink);
+}
+
+.capsule-subtitle {
+    font-size: 0.7rem;
+    font-family: var(--font-mono);
+    color: var(--c-ink-muted);
+}
+
+/* Floating Clean Top-Right Layers & Settings */
+.map-floating-settings {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
     pointer-events: auto;
 }
 
-.ribbon-metric-pill {
+.map-settings-btn {
+    border-radius: var(--radius-full);
+    padding: 0.45rem 0.95rem;
+    box-shadow: var(--shadow-md);
     display: flex;
-    flex-direction: column;
-    gap: 1px;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--c-surface);
+    backdrop-filter: blur(10px);
+    font-size: 0.78rem;
+    font-weight: 600;
 }
 
-.ribbon-label {
-    font-size: 0.68rem;
+.map-settings-popover {
+    position: absolute;
+    top: 2.85rem;
+    right: 0;
+    width: 295px;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1001;
+}
+
+.popover-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--c-border-subtle);
+}
+
+.popover-header h4 {
+    font-size: 0.88rem;
     font-weight: 700;
-    color: var(--c-ink-muted);
+    margin: 0;
+    color: var(--c-ink);
+}
+
+.popover-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.popover-label {
+    font-size: 0.72rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    color: var(--c-ink-muted);
 }
 
-.ribbon-sublabel {
-    font-size: 0.65rem;
-    color: var(--c-ink-subtle);
-    font-family: var(--font-mono);
-}
-
-.ribbon-val {
-    font-size: 0.95rem;
-    font-weight: 800;
-    font-family: var(--font-mono);
-    color: var(--c-ink);
-}
-
-.ribbon-divider {
-    width: 1px;
-    height: 28px;
-    background: var(--c-border);
-}
-
-.ribbon-control-group {
+.basemap-pill-group {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    gap: 0.35rem;
+    flex-wrap: wrap;
 }
 
-.ribbon-select {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
+.pill-btn {
+    flex: 1;
+    min-width: 80px;
+    padding: 0.35rem 0.5rem;
     border-radius: var(--radius-sm);
     border: 1px solid var(--c-border);
-    background: var(--c-surface);
+    background: var(--c-surface-subtle);
+    color: var(--c-ink-secondary);
+    font-size: 0.74rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+}
+
+.pill-btn:hover {
+    border-color: var(--c-primary);
     color: var(--c-ink);
-    font-weight: 500;
+}
+
+.pill-btn.active {
+    background: var(--c-primary);
+    border-color: var(--c-primary);
+    color: #ffffff;
 }
 
 .slider-group {

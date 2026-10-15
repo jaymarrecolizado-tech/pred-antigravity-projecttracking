@@ -1,203 +1,144 @@
 <template>
     <AppShell>
-        <!-- Page Header -->
-        <div class="page-header">
-            <div class="page-title-group">
-                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
-                    <span class="badge badge-kind-a" style="font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; padding: 0.2rem 0.5rem;">RECON COMMAND</span>
-                    <span style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--c-ink-muted);">DICT REGION 02</span>
-                </div>
-                <h1>Regional Infrastructure & Program Rollout</h1>
-                <div class="page-subtitle">
-                    Live implementation and status telemetry across Region 2 (Cagayan Valley)
-                </div>
-            </div>
-            <div style="display: flex; gap: 0.65rem;">
-                <Link href="/submissions/create" class="btn btn-secondary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 5v14M5 12h14"></path>
-                    </svg>
-                    <span>New Field Report</span>
-                </Link>
-                <Link href="/map" class="btn btn-primary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
-                        <line x1="9" x2="9" y1="3" y2="18"></line>
-                        <line x1="15" x2="15" y1="6" y2="21"></line>
-                    </svg>
-                    <span>Launch Interactive Map</span>
-                </Link>
-            </div>
-        </div>
-
-        <!-- Live Status Bar (Matching NMS-V2 Reference) -->
-        <div class="card" style="margin-bottom: 1.5rem; padding: 1rem 1.25rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-                <div style="display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;">
-                    <div style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: var(--c-ink);">
-                        <span style="color: var(--c-ink-muted); font-weight: 500;">TRACKED:</span> {{ summary.total_sites }} SITES
+        <!-- Clean Hero Welcome Header -->
+        <div class="card" style="margin-bottom: 1.5rem; padding: 1.35rem 1.6rem; background: linear-gradient(135deg, var(--c-surface), var(--c-surface-subtle)); border-left: 4px solid var(--c-primary);">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+                        <span class="badge badge-kind-a" style="font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; padding: 0.2rem 0.55rem;">RECON COMMAND</span>
+                        <span style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--c-ink-muted);">DICT REGION 02</span>
+                        <span class="chip-status status-online" style="margin-left: 0.35rem; font-size: 0.72rem;">
+                            <span class="status-dot"></span>
+                            <span>Live Telemetry</span>
+                        </span>
                     </div>
-                    <div class="chip-status status-online">
-                        <span class="status-dot"></span>
-                        <span style="font-family: var(--font-mono); font-weight: 600;">OPERATIONAL {{ summary.operational_sites }}</span>
-                    </div>
-                    <div class="chip-status status-warning" v-if="summary.offline_sites > 0">
-                        <span class="status-dot"></span>
-                        <span style="font-family: var(--font-mono); font-weight: 600;">IN PROGRESS / OFFLINE {{ summary.offline_sites }}</span>
-                    </div>
-                    <div class="chip-status status-danger" v-if="backlog.total_backlog > 0">
-                        <span class="status-dot"></span>
-                        <span style="font-family: var(--font-mono); font-weight: 600;">BACKLOG {{ backlog.total_backlog }}</span>
+                    <h1 style="font-size: 1.45rem; font-weight: 800; color: var(--c-ink); margin: 0; letter-spacing: -0.02em;">
+                        Regional Operations & Infrastructure Dashboard
+                    </h1>
+                    <div style="font-size: 0.84rem; color: var(--c-ink-muted); margin-top: 0.25rem;">
+                        Tracking {{ summary.total_sites }} project sites across 5 provinces (Batanes, Cagayan, Isabela, Nueva Vizcaya, Quirino)
                     </div>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.78rem; font-family: var(--font-mono); color: var(--c-ink-muted);">
-                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--scale-success); animation: pulse 2s infinite;"></span>
-                    <span>Refreshed: {{ currentTime }} • Region 02 Rollup Engine</span>
+                <!-- Primary Action Buttons -->
+                <div style="display: flex; gap: 0.65rem; align-items: center;">
+                    <Link href="/submissions/create" class="btn btn-secondary" style="font-size: 0.84rem; padding: 0.5rem 0.95rem;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"></path>
+                        </svg>
+                        <span>New Field Report</span>
+                    </Link>
+                    <Link href="/map" class="btn btn-primary" style="font-size: 0.84rem; padding: 0.5rem 1.05rem;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                            <line x1="9" x2="9" y1="3" y2="18"></line>
+                            <line x1="15" x2="15" y1="6" y2="21"></line>
+                        </svg>
+                        <span>Explore Interactive Map</span>
+                    </Link>
                 </div>
             </div>
         </div>
 
-        <!-- 4-Stat Metric Row -->
-        <div class="grid-4" style="margin-bottom: 1.5rem;">
+        <!-- 3 Core Hero KPI Cards -->
+        <div class="grid-3" style="margin-bottom: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
             <div class="metric-card">
                 <div class="metric-card-top">
                     <span class="metric-label">Active Initiatives</span>
-                    <span class="badge badge-kind-a">Portfolio</span>
+                    <span class="badge badge-kind-a">{{ summary.total_projects }} Projects</span>
                 </div>
                 <div class="metric-value">{{ summary.total_projects }}</div>
-                <div class="metric-subtext">Across 5 provinces in Region 2</div>
+                <div class="metric-subtext">Free Wi-Fi, GovNet, eLGU & Capacity Programs</div>
             </div>
 
             <div class="metric-card">
                 <div class="metric-card-top">
-                    <span class="metric-label">Accomplishment Rate</span>
+                    <span class="metric-label">Operational Sites</span>
                     <span style="color: var(--scale-success); font-weight: 700; font-size: 0.85rem; font-family: var(--font-mono);">
-                        {{ summary.completion_rate }}%
+                        {{ summary.completion_rate }}% Online
                     </span>
                 </div>
-                <div class="metric-value">{{ summary.operational_sites }} <span style="font-size: 0.95rem; font-weight: 500; color: var(--c-ink-muted);">/ {{ summary.total_sites }}</span></div>
-                <div class="metric-subtext">Avg cycle time: {{ summary.average_cycle_time }} days</div>
+                <div class="metric-value">
+                    {{ summary.operational_sites }} 
+                    <span style="font-size: 0.95rem; font-weight: 500; color: var(--c-ink-muted);">/ {{ summary.total_sites }} Sites</span>
+                </div>
+                <div class="metric-subtext">Average rollout cycle time: {{ summary.average_cycle_time }} days</div>
             </div>
 
             <div class="metric-card">
                 <div class="metric-card-top">
-                    <span class="metric-label">LGU Scope Coverage</span>
-                    <span class="badge badge-kind-b">{{ summary.scope_coverage.coverage_pct }}%</span>
+                    <span class="metric-label">Municipal Coverage</span>
+                    <span class="badge badge-kind-b">{{ summary.scope_coverage.coverage_pct }}% Covered</span>
                 </div>
                 <div class="metric-value">{{ summary.scope_coverage.covered_lgus }} / {{ summary.scope_coverage.total_lgus }}</div>
-                <div class="metric-subtext">Cities & municipalities with $\ge 1$ site</div>
-            </div>
-
-            <div class="metric-card">
-                <div class="metric-card-top">
-                    <span class="metric-label">Beneficiaries (GAD)</span>
-                    <span class="badge badge-kind-c">{{ gad.female_percentage }}% F</span>
-                </div>
-                <div class="metric-value">{{ formatNumber(gad.total_beneficiaries) }}</div>
-                <div class="metric-subtext">{{ formatNumber(gad.female_count) }} Female • {{ formatNumber(gad.male_count) }} Male</div>
+                <div class="metric-subtext">Cities & municipalities with active DICT presence</div>
             </div>
         </div>
 
-        <!-- Backlog & Aging Tracking Alert Ribbon -->
-        <div class="card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--scale-danger); padding: 1rem 1.25rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="font-weight: 700; font-size: 0.95rem; color: var(--c-ink);">Target Overdue Backlog & Aging Analysis</span>
-                        <span class="badge" style="background: rgba(239, 68, 68, 0.15); color: var(--scale-danger); font-family: var(--font-mono);">
-                            {{ backlog.total_backlog }} Overdue Sites
-                        </span>
-                    </div>
-                    <div style="font-size: 0.8rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
-                        Deployments exceeding contractual target completion dates grouped by aging delinquency
-                    </div>
-                </div>
-
-                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                    <div v-for="bucket in backlog.buckets" :key="bucket.label"
-                         style="padding: 0.35rem 0.65rem; border-radius: var(--radius-sm); font-size: 0.75rem; font-family: var(--font-mono); display: flex; align-items: center; gap: 0.4rem;"
-                         :style="getBucketStyle(bucket.severity)">
-                        <span>{{ bucket.label }}:</span>
-                        <strong style="font-size: 0.85rem;">{{ bucket.count }}</strong>
-                    </div>
-                </div>
-            </div>
+        <!-- Clean Segmented Tabs Navigation -->
+        <div class="tabs-nav" style="margin-bottom: 1.25rem; border-bottom: 1px solid var(--c-border); display: flex; gap: 0.5rem;">
+            <button 
+                type="button" 
+                class="tab-btn" 
+                :class="{ active: activeTab === 'progress' }"
+                @click="activeTab = 'progress'"
+                style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600;"
+            >
+                📊 Implementation Progress & Projects
+            </button>
+            <button 
+                type="button" 
+                class="tab-btn" 
+                :class="{ active: activeTab === 'provinces' }"
+                @click="activeTab = 'provinces'"
+                style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600;"
+            >
+                🏛️ Provinces & LGU Breakdown
+            </button>
+            <button 
+                type="button" 
+                class="tab-btn" 
+                :class="{ active: activeTab === 'activity' }"
+                @click="activeTab = 'activity'"
+                style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600;"
+            >
+                📋 Field Updates & Alerts
+                <span v-if="backlog.total_backlog > 0" class="badge" style="background: rgba(239, 68, 68, 0.15); color: var(--scale-danger); font-size: 0.68rem; margin-left: 0.4rem;">
+                    {{ backlog.total_backlog }} Overdue
+                </span>
+            </button>
         </div>
 
-        <!-- Two-Column Analytics Grid: Provincial Leaderboard + Burn-Up Trajectory -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
-            <!-- Provincial Accomplishment Leaderboard -->
-            <div class="card">
+        <!-- TAB 1: IMPLEMENTATION PROGRESS & PROJECTS -->
+        <div v-if="activeTab === 'progress'">
+            <!-- Trajectory vs Milestone -->
+            <div class="card" style="margin-bottom: 1.5rem;">
                 <div class="card-header">
                     <div>
-                        <div class="card-title">Provincial Rollup Leaderboard</div>
+                        <div class="card-title">Rollout Trajectory & Monthly Velocity</div>
                         <div style="font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
-                            Live completion rate across Region 2 provinces
-                        </div>
-                    </div>
-                    <span class="badge badge-neutral" style="font-family: var(--font-mono);">5 Provinces</span>
-                </div>
-                <div class="card-body" style="padding: 1rem 1.25rem;">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div v-for="prov in provincialLeaderboard" :key="prov.psgc"
-                             style="padding-bottom: 0.75rem; border-bottom: 1px solid var(--c-border);">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-                                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                    <span style="font-weight: 600; color: var(--c-ink); font-size: 0.88rem;">{{ prov.name }}</span>
-                                    <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--c-ink-muted);">{{ prov.completed_sites }}/{{ prov.total_sites }} sites</span>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 0.6rem;">
-                                    <span v-if="prov.backlog_sites > 0"
-                                          style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--scale-danger); background: rgba(239, 68, 68, 0.1); padding: 0.1rem 0.35rem; border-radius: var(--radius-sm);">
-                                        {{ prov.backlog_sites }} backlog
-                                    </span>
-                                    <span style="font-family: var(--font-mono); font-weight: 700; font-size: 0.85rem;"
-                                          :style="{ color: getProgressColor(prov.completion_rate) }">
-                                        {{ prov.completion_rate }}%
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- Progress Bar -->
-                            <div style="height: 6px; background: var(--c-border); border-radius: var(--radius-full); overflow: hidden;">
-                                <div :style="{ width: prov.completion_rate + '%', background: getProgressColor(prov.completion_rate), height: '100%', transition: 'width 0.4s ease' }"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Burn-Up Trajectory / Accomplishment Trend -->
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">Burn-Up Trajectory & Milestone Velocity</div>
-                        <div style="font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
-                            Monthly completed sites vs. planned targets
+                            Monthly completed sites vs planned regional targets
                         </div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; font-family: var(--font-mono);">
                         <span style="display: flex; align-items: center; gap: 0.3rem;">
-                            <span style="width: 10px; height: 10px; background: var(--scale-success); border-radius: 2px;"></span> Actual
+                            <span style="width: 10px; height: 10px; background: var(--scale-success); border-radius: 2px;"></span> Actual Completed
                         </span>
                         <span style="display: flex; align-items: center; gap: 0.3rem;">
-                            <span style="width: 10px; height: 10px; background: var(--c-ink-muted); border-radius: 2px;"></span> Planned
+                            <span style="width: 10px; height: 10px; background: var(--c-border-hover); border-radius: 2px;"></span> Planned Target
                         </span>
                     </div>
                 </div>
                 <div class="card-body" style="padding: 1.25rem;">
-                    <!-- Trajectory Visual Bars -->
-                    <div style="display: flex; justify-content: space-between; align-items: flex-end; height: 180px; padding-top: 1rem; border-bottom: 1px solid var(--c-border);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-end; height: 160px; padding-top: 1rem; border-bottom: 1px solid var(--c-border);">
                         <div v-for="(label, idx) in trajectory.labels" :key="label"
                              style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; height: 100%; justify-content: flex-end;">
                             <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--c-ink); font-weight: 600;">
                                 {{ trajectory.actual[idx] }}
                             </div>
-                            <div style="display: flex; gap: 4px; align-items: flex-end; height: 120px; width: 36px; justify-content: center;">
-                                <!-- Planned Bar -->
+                            <div style="display: flex; gap: 4px; align-items: flex-end; height: 110px; width: 36px; justify-content: center;">
                                 <div :style="{ height: getBarHeight(trajectory.planned[idx]) + '%', width: '12px', background: 'var(--c-border-hover)', borderRadius: '2px 2px 0 0' }"
                                      title="Planned Target"></div>
-                                <!-- Actual Bar -->
                                 <div :style="{ height: getBarHeight(trajectory.actual[idx]) + '%', width: '12px', background: 'var(--scale-success)', borderRadius: '2px 2px 0 0' }"
                                      title="Actual Completed"></div>
                             </div>
@@ -206,89 +147,15 @@
                             </div>
                         </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--c-ink-muted); margin-top: 0.75rem;">
-                        <span>Progress is pacing within scheduled variance</span>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.75rem;">
+                        <span>Pacing within scheduled variance across Region 2</span>
                         <span style="font-family: var(--font-mono); color: var(--scale-success); font-weight: 600;">Velocity: Steady</span>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 4 Tracking Archetypes Showcase -->
-        <div class="card" style="margin-bottom: 1.5rem;">
-            <div class="card-header">
-                <div>
-                    <div class="card-title">4 Portfolio Tracking Archetypes</div>
-                    <div style="font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
-                        Configurable engines designed to track diverse DICT mandates without custom coding
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="grid-4">
-                    <!-- Kind A -->
-                    <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-a-bg); border: 1px solid var(--kind-a-border);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span class="badge badge-kind-a">Kind A</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--kind-a);">
-                                {{ archetypeStats.kind_a.sites_count }} Sites
-                            </span>
-                        </div>
-                        <h4 style="font-size: 0.92rem; margin-bottom: 0.35rem;">Point Pins & Clusters</h4>
-                        <p style="font-size: 0.78rem; color: var(--c-ink-secondary); line-height: 1.4;">
-                            Physical sites with install → operate lifecycles. Free Wi-Fi, GovNet, PIALEOS, LEO Satellite.
-                        </p>
-                    </div>
-
-                    <!-- Kind B -->
-                    <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-b-bg); border: 1px solid var(--kind-b-border);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span class="badge badge-kind-b">Kind B</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--kind-b);">
-                                {{ archetypeStats.kind_b.sites_count }} Onboarded
-                            </span>
-                        </div>
-                        <h4 style="font-size: 0.92rem; margin-bottom: 0.35rem;">Choropleth Adoption</h4>
-                        <p style="font-size: 0.78rem; color: var(--c-ink-secondary); line-height: 1.4;">
-                            LGUs and agencies adopting software/services. eLGU, eGovPay, eGovPH, GovMail, GovCloud.
-                        </p>
-                    </div>
-
-                    <!-- Kind C -->
-                    <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-c-bg); border: 1px solid var(--kind-c-border);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span class="badge badge-kind-c">Kind C</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--kind-c);">
-                                {{ archetypeStats.kind_c.sites_count }} Cohorts
-                            </span>
-                        </div>
-                        <h4 style="font-size: 0.92rem; margin-bottom: 0.35rem;">Activities & Headcounts</h4>
-                        <p style="font-size: 0.78rem; color: var(--c-ink-secondary); line-height: 1.4;">
-                            Trainings and distributions with sex-disaggregated (M/F) GAD indicators. DigitalJobsPH, ILCDB.
-                        </p>
-                    </div>
-
-                    <!-- Kind D -->
-                    <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-d-bg); border: 1px solid var(--kind-d-border);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span class="badge badge-kind-d">Kind D</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--kind-d);">
-                                {{ archetypeStats.kind_d.sites_count }} Studies
-                            </span>
-                        </div>
-                        <h4 style="font-size: 0.92rem; margin-bottom: 0.35rem;">Milestones & Sweeps</h4>
-                        <p style="font-size: 0.78rem; color: var(--c-ink-secondary); line-height: 1.4;">
-                            Field sweeps and strategic deliverables without fixed coordinates. ICT Household Survey, NICTEF.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Priority Programs Directory & Recent Activity Row -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 1.5rem;">
-            <!-- Active Programs Preview Table -->
-            <div class="card">
+            <!-- Priority Programs Table -->
+            <div class="card" style="margin-bottom: 1.5rem;">
                 <div class="card-header">
                     <div>
                         <div class="card-title">Priority Programs Directory</div>
@@ -296,15 +163,15 @@
                             Live accomplishments calculated from field site telemetry
                         </div>
                     </div>
-                    <Link href="/projects" class="btn btn-outline btn-sm">View All {{ summary.total_projects }}</Link>
+                    <Link href="/projects" class="btn btn-outline btn-sm">View All {{ summary.total_projects }} Projects →</Link>
                 </div>
                 <div class="table-wrapper">
                     <table class="table-modern">
                         <thead>
                             <tr>
                                 <th>Initiative</th>
-                                <th>Kind</th>
-                                <th>Accomplishment</th>
+                                <th>Archetype</th>
+                                <th>Accomplishment Rate</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -318,15 +185,15 @@
                                     <span :class="'badge badge-kind-' + proj.kind.toLowerCase()">Kind {{ proj.kind }}</span>
                                 </td>
                                 <td>
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <span style="font-family: var(--font-mono); font-weight: 600; font-size: 0.82rem; width: 40px;">{{ proj.percent }}%</span>
-                                        <div style="width: 70px; height: 5px; background: var(--c-border); border-radius: var(--radius-full); overflow: hidden;">
+                                    <div style="display: flex; align-items: center; gap: 0.65rem;">
+                                        <span style="font-family: var(--font-mono); font-weight: 600; font-size: 0.82rem; width: 42px;">{{ proj.percent }}%</span>
+                                        <div style="width: 100px; height: 6px; background: var(--c-border); border-radius: var(--radius-full); overflow: hidden;">
                                             <div :style="{ width: proj.percent + '%', background: getProgressColor(proj.percent), height: '100%' }"></div>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <Link :href="'/map?project_id=' + proj.id" class="btn btn-ghost btn-sm">Map</Link>
+                                    <Link :href="'/map?project_id=' + proj.id" class="btn btn-ghost btn-sm" style="font-size: 0.76rem;">View Map →</Link>
                                 </td>
                             </tr>
                         </tbody>
@@ -334,33 +201,203 @@
                 </div>
             </div>
 
-            <!-- Recent Verified Field Reports & Timeline Activity -->
+            <!-- 4 Archetypes Breakdown -->
+            <div class="grid-4" style="margin-bottom: 1rem;">
+                <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-a-bg); border: 1px solid var(--kind-a-border);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                        <span class="badge badge-kind-a">Kind A</span>
+                        <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--kind-a);">{{ archetypeStats.kind_a.sites_count }} Sites</strong>
+                    </div>
+                    <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 0.2rem;">Physical Deployments</div>
+                    <p style="font-size: 0.75rem; color: var(--c-ink-secondary); margin: 0; line-height: 1.4;">
+                        Free Wi-Fi, GovNet, PIALEOS, Satellite terminals.
+                    </p>
+                </div>
+
+                <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-b-bg); border: 1px solid var(--kind-b-border);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                        <span class="badge badge-kind-b">Kind B</span>
+                        <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--kind-b);">{{ archetypeStats.kind_b.sites_count }} LGUs</strong>
+                    </div>
+                    <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 0.2rem;">System Adoptions</div>
+                    <p style="font-size: 0.75rem; color: var(--c-ink-secondary); margin: 0; line-height: 1.4;">
+                        eLGU, eGovPay, eGovPH, GovMail, PNPKI rollouts.
+                    </p>
+                </div>
+
+                <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-c-bg); border: 1px solid var(--kind-c-border);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                        <span class="badge badge-kind-c">Kind C</span>
+                        <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--kind-c);">{{ archetypeStats.kind_c.sites_count }} Cohorts</strong>
+                    </div>
+                    <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 0.2rem;">Capacity & Trainings</div>
+                    <p style="font-size: 0.75rem; color: var(--c-ink-secondary); margin: 0; line-height: 1.4;">
+                        DigitalJobsPH, tech literacy with sex-disaggregated GAD metrics.
+                    </p>
+                </div>
+
+                <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-d-bg); border: 1px solid var(--kind-d-border);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                        <span class="badge badge-kind-d">Kind D</span>
+                        <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--kind-d);">{{ archetypeStats.kind_d.sites_count }} Studies</strong>
+                    </div>
+                    <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 0.2rem;">Milestones & Surveys</div>
+                    <p style="font-size: 0.75rem; color: var(--c-ink-secondary); margin: 0; line-height: 1.4;">
+                        Regional surveys and policy sweeps without fixed coordinates.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: PROVINCES & LGU BREAKDOWN -->
+        <div v-else-if="activeTab === 'provinces'">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                <!-- Provincial Rollup Leaderboard -->
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Provincial Rollup Leaderboard</div>
+                            <div style="font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
+                                Live completion rate across Region 2 provinces
+                            </div>
+                        </div>
+                        <span class="badge badge-neutral" style="font-family: var(--font-mono);">5 Provinces</span>
+                    </div>
+                    <div class="card-body" style="padding: 1.25rem;">
+                        <div style="display: flex; flex-direction: column; gap: 1.15rem;">
+                            <div v-for="prov in provincialLeaderboard" :key="prov.psgc"
+                                 style="padding-bottom: 0.85rem; border-bottom: 1px solid var(--c-border-subtle);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <strong style="color: var(--c-ink); font-size: 0.92rem;">{{ prov.name }}</strong>
+                                        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--c-ink-muted);">
+                                            {{ prov.completed_sites }}/{{ prov.total_sites }} sites
+                                        </span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                        <span v-if="prov.backlog_sites > 0"
+                                              style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--scale-danger); background: rgba(239, 68, 68, 0.1); padding: 0.1rem 0.35rem; border-radius: var(--radius-sm);">
+                                            {{ prov.backlog_sites }} backlog
+                                        </span>
+                                        <span style="font-family: var(--font-mono); font-weight: 700; font-size: 0.88rem;"
+                                              :style="{ color: getProgressColor(prov.completion_rate) }">
+                                            {{ prov.completion_rate }}%
+                                        </span>
+                                    </div>
+                                </div>
+                                <div style="height: 6px; background: var(--c-border); border-radius: var(--radius-full); overflow: hidden;">
+                                    <div :style="{ width: prov.completion_rate + '%', background: getProgressColor(prov.completion_rate), height: '100%', transition: 'width 0.4s ease' }"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LGU & Beneficiaries Demographics -->
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Scope Coverage & Beneficiaries</div>
+                            <div style="font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
+                                Municipal reach & GAD gender-disaggregated counts
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body" style="padding: 1.25rem; display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--c-surface-subtle); border: 1px solid var(--c-border);">
+                            <div style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; color: var(--c-ink-muted); margin-bottom: 0.35rem;">
+                                LGU Scope Reach
+                            </div>
+                            <div style="font-size: 1.35rem; font-weight: 800; color: var(--c-ink);">
+                                {{ summary.scope_coverage.covered_lgus }} of {{ summary.scope_coverage.total_lgus }} LGUs
+                            </div>
+                            <div style="font-size: 0.78rem; color: var(--c-ink-secondary); margin-top: 0.2rem;">
+                                {{ summary.scope_coverage.coverage_pct }}% of all cities & municipalities in Region 2 have active deployments.
+                            </div>
+                        </div>
+
+                        <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--c-surface-subtle); border: 1px solid var(--c-border);">
+                            <div style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; color: var(--c-ink-muted); margin-bottom: 0.35rem;">
+                                Total Beneficiaries (GAD)
+                            </div>
+                            <div style="font-size: 1.35rem; font-weight: 800; color: var(--c-ink);">
+                                {{ formatNumber(gad.total_beneficiaries) }} People Reached
+                            </div>
+                            <div style="margin-top: 0.6rem; display: flex; gap: 0.75rem;">
+                                <div style="flex: 1; padding: 0.5rem; background: var(--c-surface); border-radius: var(--radius-sm); border: 1px solid var(--c-border-subtle);">
+                                    <div style="font-size: 0.7rem; color: var(--c-ink-muted);">Female</div>
+                                    <strong style="color: #ec4899; font-size: 0.95rem;">{{ formatNumber(gad.female_count) }} ({{ gad.female_percentage }}%)</strong>
+                                </div>
+                                <div style="flex: 1; padding: 0.5rem; background: var(--c-surface); border-radius: var(--radius-sm); border: 1px solid var(--c-border-subtle);">
+                                    <div style="font-size: 0.7rem; color: var(--c-ink-muted);">Male</div>
+                                    <strong style="color: #3b82f6; font-size: 0.95rem;">{{ formatNumber(gad.male_count) }} ({{ (100 - gad.female_percentage).toFixed(1) }}%)</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="text-align: right;">
+                            <Link href="/admin/geo" class="btn btn-outline btn-sm">Explore PSGC Hierarchy Tree →</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: FIELD UPDATES & ALERTS -->
+        <div v-else-if="activeTab === 'activity'">
+            <!-- Backlog Alert Card -->
+            <div v-if="backlog.total_backlog > 0" class="card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--scale-danger); padding: 1.15rem 1.4rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-weight: 800; font-size: 1rem; color: var(--c-ink);">Contractual Overdue Backlog</span>
+                            <span class="badge" style="background: rgba(239, 68, 68, 0.15); color: var(--scale-danger); font-family: var(--font-mono); font-weight: 700;">
+                                {{ backlog.total_backlog }} Sites
+                            </span>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--c-ink-muted); margin-top: 0.25rem;">
+                            Deployments exceeding contractual target completion dates grouped by aging delinquency
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <div v-for="bucket in backlog.buckets" :key="bucket.label"
+                             style="padding: 0.35rem 0.65rem; border-radius: var(--radius-sm); font-size: 0.75rem; font-family: var(--font-mono); display: flex; align-items: center; gap: 0.4rem;"
+                             :style="getBucketStyle(bucket.severity)">
+                            <span>{{ bucket.label }}:</span>
+                            <strong style="font-size: 0.85rem;">{{ bucket.count }}</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Verified Field Reports Table -->
             <div class="card">
                 <div class="card-header">
                     <div>
                         <div class="card-title">Recent Field Telemetry & Verification</div>
                         <div style="font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
-                            Append-only milestones submitted by field engineers
+                            Chronological milestones submitted by field engineers
                         </div>
                     </div>
-                    <Link href="/reviews" class="btn btn-outline btn-sm">QA Queue</Link>
+                    <Link href="/reviews" class="btn btn-outline btn-sm">Open Verification Queue →</Link>
                 </div>
-                <div class="card-body" style="padding: 0.5rem 1.25rem;">
-                    <div v-if="recentInterventions.length === 0" style="padding: 2rem; text-align: center; color: var(--c-ink-muted);">
+                <div class="card-body" style="padding: 0.75rem 1.25rem;">
+                    <div v-if="recentInterventions.length === 0" style="padding: 2.5rem; text-align: center; color: var(--c-ink-muted);">
                         No recent field interventions recorded yet.
                     </div>
                     <div v-else style="display: flex; flex-direction: column;">
                         <div v-for="inv in recentInterventions" :key="inv.id"
-                             style="padding: 0.75rem 0; border-bottom: 1px solid var(--c-border); display: flex; justify-content: space-between; align-items: center; gap: 0.75rem;">
+                             style="padding: 0.85rem 0; border-bottom: 1px solid var(--c-border-subtle); display: flex; justify-content: space-between; align-items: center; gap: 0.75rem;">
                             <div>
                                 <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                    <span style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; color: var(--c-ink);">{{ inv.site_code }}</span>
+                                    <span style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; color: var(--c-ink);">{{ inv.site_code }}</span>
                                     <span class="badge" :class="getVerificationBadgeClass(inv.verification_status)">{{ inv.verification_status }}</span>
                                 </div>
-                                <div style="font-size: 0.78rem; color: var(--c-ink); margin-top: 0.15rem;">
+                                <div style="font-size: 0.82rem; color: var(--c-ink); margin-top: 0.2rem;">
                                     {{ inv.intervention_type }} • <span style="color: var(--c-ink-muted);">{{ inv.location_name }}</span>
                                 </div>
-                                <div style="font-size: 0.72rem; color: var(--c-ink-muted); font-family: var(--font-mono);">
+                                <div style="font-size: 0.72rem; color: var(--c-ink-muted); font-family: var(--font-mono); margin-top: 0.15rem;">
                                     By {{ inv.author }} • {{ inv.occurred_at }}
                                 </div>
                             </div>
@@ -416,6 +453,7 @@ const props = defineProps({
     },
 });
 
+const activeTab = ref('progress');
 const currentTime = ref('');
 
 onMounted(() => {

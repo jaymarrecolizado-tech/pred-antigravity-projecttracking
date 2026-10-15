@@ -8,24 +8,20 @@
                 </Link>
             </div>
 
-            <!-- Program Switcher Card (NMS Reference) -->
-            <div class="sidebar-program-card">
-                <div class="program-card-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="3"></circle>
-                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                    </svg>
-                </div>
-                <div class="program-card-text">
-                    <div class="program-card-name">All Programs (R2)</div>
-                    <div class="program-card-stats">29 Active • 5 Provinces</div>
-                </div>
+            <!-- Sleek Region Status Pill -->
+            <div style="padding: 0.55rem 0.85rem; margin: 0.75rem 1rem 0.35rem 1rem; background: var(--c-surface-subtle); border-radius: var(--radius-md); border: 1px solid var(--c-border-subtle); display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 0.74rem; font-weight: 600; color: var(--c-ink); display: flex; align-items: center; gap: 0.45rem;">
+                    <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--scale-success); display: inline-block;"></span>
+                    Region 02 Hub
+                </span>
+                <span style="font-size: 0.68rem; font-family: var(--font-mono); color: var(--c-ink-muted);">5 Prov • 29 Proj</span>
             </div>
 
-            <!-- Navigation Sections -->
+            <!-- Clean Navigation Sections -->
             <nav class="sidebar-nav">
+                <!-- 1. Main Workspace -->
                 <div class="nav-section">
-                    <div class="nav-section-title">Operations</div>
+                    <div class="nav-section-title">Workspace</div>
                     <Link href="/" class="nav-item" :class="{ active: currentRoute === 'dashboard' || currentRoute === '' }">
                         <span class="nav-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -35,7 +31,7 @@
                                 <rect width="7" height="5" x="3" y="16" rx="1"></rect>
                             </svg>
                         </span>
-                        <span>Live Dashboard</span>
+                        <span>Dashboard</span>
                     </Link>
                     <Link href="/map" class="nav-item" :class="{ active: currentRoute.startsWith('map') }">
                         <span class="nav-icon">
@@ -46,22 +42,20 @@
                             </svg>
                         </span>
                         <span>Interactive Map</span>
-                        <span class="nav-badge">R2</span>
+                        <span class="nav-badge" style="background: var(--c-primary-subtle); color: var(--c-primary); font-weight: 700;">Live</span>
                     </Link>
                 </div>
 
+                <!-- 2. Operations & Field -->
                 <div class="nav-section">
-                    <div class="nav-section-title">Portfolio & Scope</div>
+                    <div class="nav-section-title">Operations & Field</div>
                     <Link href="/projects" class="nav-item" :class="{ active: currentRoute.startsWith('projects') }">
                         <span class="nav-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="m16 6 4 14"></path>
-                                <path d="M12 6v14"></path>
-                                <path d="M8 8v12"></path>
-                                <path d="M4 4v16"></path>
+                                <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path>
                             </svg>
                         </span>
-                        <span>Projects Directory</span>
+                        <span>Projects</span>
                         <span class="nav-badge">29</span>
                     </Link>
                     <Link href="/sites" class="nav-item" :class="{ active: currentRoute.startsWith('sites') }">
@@ -81,29 +75,21 @@
                                 <path d="M6 20v-6"></path>
                             </svg>
                         </span>
-                        <span>Institutions (LGUs/SUCs)</span>
+                        <span>LGUs & Partners</span>
                     </Link>
-                </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Field & Accomplishment</div>
                     <Link href="/submissions/create" class="nav-item" :class="{ active: currentRoute.startsWith('submissions') }">
                         <span class="nav-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" x2="8" y1="13" y2="13"></line>
-                                <line x1="16" x2="8" y1="17" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
+                                <path d="M12 5v14M5 12h14"></path>
                             </svg>
                         </span>
-                        <span>Field Submissions</span>
+                        <span>Submit Field Report</span>
                     </Link>
                     <Link href="/reviews" class="nav-item" :class="{ active: currentRoute.startsWith('reviews') }">
                         <span class="nav-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                <polyline points="9 12 11 14 15 10"></polyline>
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
                             </svg>
                         </span>
                         <span>Verification Queue</span>
@@ -111,62 +97,76 @@
                     <Link href="/reports" class="nav-item" :class="{ active: currentRoute.startsWith('reports') }">
                         <span class="nav-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" x2="12" y1="20" y2="10"></line>
-                                <line x1="18" x2="18" y1="20" y2="4"></line>
-                                <line x1="6" x2="6" y1="20" y2="16"></line>
+                                <line x1="18" x2="18" y1="20" y2="10"></line>
+                                <line x1="12" x2="12" y1="20" y2="4"></line>
+                                <line x1="6" x2="6" y1="20" y2="14"></line>
                             </svg>
                         </span>
-                        <span>Accomplishment Reports</span>
+                        <span>Reports & Exports</span>
                     </Link>
                 </div>
 
+                <!-- 3. Administration (Collapsible Accordion) -->
                 <div class="nav-section">
-                    <div class="nav-section-title">Administration</div>
-                    <Link href="/admin/geo" class="nav-item" :class="{ active: currentRoute.startsWith('admin/geo') }">
-                        <span class="nav-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" x2="22" y1="12" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                            </svg>
-                        </span>
-                        <span>PSGC & Districts</span>
-                    </Link>
-                    <Link href="/admin/project-types" class="nav-item" :class="{ active: currentRoute.startsWith('admin/project-types') }">
-                        <span class="nav-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 20h9"></path>
-                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-                            </svg>
-                        </span>
-                        <span>Workflow Builder</span>
-                    </Link>
-                    <Link href="/admin/users" class="nav-item" :class="{ active: currentRoute.startsWith('admin/users') }">
-                        <span class="nav-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </span>
-                        <span>Users & Grants</span>
-                    </Link>
-                    <Link href="/admin/audit" class="nav-item" :class="{ active: currentRoute.startsWith('admin/audit') }">
-                        <span class="nav-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                <circle cx="12" cy="12" r="3"></circle>
-                            </svg>
-                        </span>
-                        <span>Audit Trail</span>
-                    </Link>
+                    <button 
+                        type="button" 
+                        class="nav-section-title" 
+                        @click="isAdminOpen = !isAdminOpen"
+                        style="background: transparent; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; width: 100%; text-align: left;"
+                    >
+                        <span>Administration</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" :style="{ transform: isAdminOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+
+                    <div v-show="isAdminOpen" style="display: flex; flex-direction: column; gap: 0.2rem;">
+                        <Link href="/admin/geo" class="nav-item" :class="{ active: currentRoute.startsWith('admin/geo') }">
+                            <span class="nav-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" x2="22" y1="12" y2="12"></line>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            </span>
+                            <span>PSGC & Districts</span>
+                        </Link>
+                        <Link href="/admin/users" class="nav-item" :class="{ active: currentRoute.startsWith('admin/users') }">
+                            <span class="nav-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </span>
+                            <span>Users & Access</span>
+                        </Link>
+                        <Link href="/admin/audit" class="nav-item" :class="{ active: currentRoute.startsWith('admin/audit') }">
+                            <span class="nav-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </span>
+                            <span>Audit Trail</span>
+                        </Link>
+                        <Link href="/admin/project-types" class="nav-item" :class="{ active: currentRoute.startsWith('admin/project-types') }">
+                            <span class="nav-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20h9"></path>
+                                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                                </svg>
+                            </span>
+                            <span>Workflow Builder</span>
+                        </Link>
+                    </div>
                 </div>
             </nav>
 
             <div class="sidebar-footer">
-                <span>Region 2 Hub</span>
-                <span>v2.0 • Active</span>
+                <span>RECON Platform</span>
+                <span>Region 02</span>
             </div>
         </aside>
 
@@ -235,6 +235,8 @@ const currentRoute = computed(() => {
     return page.url.replace(/^\//, '');
 });
 
+const isAdminOpen = ref(false);
+
 function toggleTheme() {
     currentTheme.value = currentTheme.value === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', currentTheme.value);
@@ -250,5 +252,6 @@ onMounted(() => {
         currentTheme.value = prefersDark ? 'dark' : 'light';
     }
     document.documentElement.setAttribute('data-theme', currentTheme.value);
+    isAdminOpen.value = currentRoute.value.startsWith('admin');
 });
 </script>
