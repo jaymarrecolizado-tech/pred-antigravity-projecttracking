@@ -2,9 +2,9 @@
     <AppShell>
         <div class="page-header">
             <div>
-                <h1 class="page-title">Project Sites Registry</h1>
+                <h1 class="page-title">Free Wi-Fi Sites Registry</h1>
                 <p class="page-description">
-                    Centralized registry of physical deployment sites, connectivity nodes, and institutional installations across Region 2.
+                    Centralized registry of all 1,868 Free Wi-Fi access points and public connectivity sites across DICT Regional Office 2.
                 </p>
             </div>
             <div class="page-actions" v-if="canEnroll">

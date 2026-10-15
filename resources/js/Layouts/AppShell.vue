@@ -12,9 +12,9 @@
             <div style="padding: 0.55rem 0.85rem; margin: 0.75rem 1rem 0.35rem 1rem; background: var(--c-surface-subtle); border-radius: var(--radius-md); border: 1px solid var(--c-border-subtle); display: flex; align-items: center; justify-content: space-between;">
                 <span style="font-size: 0.74rem; font-weight: 600; color: var(--c-ink); display: flex; align-items: center; gap: 0.45rem;">
                     <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--scale-success); display: inline-block;"></span>
-                    Region 02 Hub
+                    Free Wi-Fi Project
                 </span>
-                <span style="font-size: 0.68rem; font-family: var(--font-mono); color: var(--c-ink-muted);">5 Prov • 29 Proj</span>
+                <span style="font-size: 0.68rem; font-family: var(--font-mono); color: var(--c-ink-muted);">1,868 Sites • 5 Prov</span>
             </div>
 
             <!-- Clean Navigation Sections -->
@@ -41,8 +41,8 @@
                                 <line x1="15" x2="15" y1="6" y2="21"></line>
                             </svg>
                         </span>
-                        <span>Interactive Map</span>
-                        <span class="nav-badge" style="background: var(--c-primary-subtle); color: var(--c-primary); font-weight: 700;">Live</span>
+                        <span>Free Wi-Fi Map</span>
+                        <span class="nav-badge" style="background: var(--c-primary-subtle); color: var(--c-primary); font-weight: 700;">1,868</span>
                     </Link>
                 </div>
 
@@ -55,8 +55,7 @@
                                 <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path>
                             </svg>
                         </span>
-                        <span>Projects</span>
-                        <span class="nav-badge">29</span>
+                        <span>Lots & Contracts</span>
                     </Link>
                     <Link href="/sites" class="nav-item" :class="{ active: currentRoute.startsWith('sites') }">
                         <span class="nav-icon">
@@ -65,7 +64,7 @@
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
                         </span>
-                        <span>Site Registry</span>
+                        <span>Wi-Fi Site Registry</span>
                     </Link>
                     <Link href="/institutions" class="nav-item" :class="{ active: currentRoute.startsWith('institutions') }">
                         <span class="nav-icon">
@@ -75,7 +74,7 @@
                                 <path d="M6 20v-6"></path>
                             </svg>
                         </span>
-                        <span>LGUs & Partners</span>
+                        <span>LGUs & Locations</span>
                     </Link>
                     <Link href="/submissions/create" class="nav-item" :class="{ active: currentRoute.startsWith('submissions') }">
                         <span class="nav-icon">
@@ -83,7 +82,7 @@
                                 <path d="M12 5v14M5 12h14"></path>
                             </svg>
                         </span>
-                        <span>Submit Field Report</span>
+                        <span>Submit Site Report</span>
                     </Link>
                     <Link href="/reviews" class="nav-item" :class="{ active: currentRoute.startsWith('reviews') }">
                         <span class="nav-icon">

@@ -10,7 +10,7 @@
                     </svg>
                 </div>
                 <div class="capsule-info">
-                    <div class="capsule-title">RECON Regional Map</div>
+                    <div class="capsule-title">DICT R02 • Free Wi-Fi Map</div>
                     <div class="capsule-subtitle">{{ activePointsCount }} of {{ summary.total_sites }} Sites Active</div>
                 </div>
                 <button
@@ -22,7 +22,7 @@
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                     </svg>
-                    <span>Filter ({{ selectedProjectIds.length }}/{{ projects.length }})</span>
+                    <span>Filter Lots ({{ selectedProjectIds.length }}/{{ projects.length }})</span>
                 </button>
             </div>
 
@@ -143,8 +143,8 @@
             <div v-if="showFilterDrawer" class="map-drawer filter-drawer">
                 <div class="drawer-header">
                     <div>
-                        <h3 class="drawer-title">Portfolio Filter Tray</h3>
-                        <p class="drawer-subtitle">Filter map points across initiatives and tracking archetypes.</p>
+                        <h3 class="drawer-title">Filter by Delivery Lot</h3>
+                        <p class="drawer-subtitle">Filter Wi-Fi access sites by procurement lot or batch.</p>
                     </div>
                     <button class="modal-close" @click="showFilterDrawer = false">✕</button>
                 </div>

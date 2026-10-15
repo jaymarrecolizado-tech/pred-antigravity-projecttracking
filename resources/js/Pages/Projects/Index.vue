@@ -2,9 +2,9 @@
     <AppShell>
         <div class="page-header">
             <div>
-                <h1 class="page-title">Region 2 Projects Portfolio</h1>
+                <h1 class="page-title">Free Wi-Fi Lots & Contracts</h1>
                 <p class="page-description">
-                    Multi-program portfolio directory tracking initiatives across Batanes, Cagayan, Isabela, Nueva Vizcaya, and Quirino.
+                    Free Wi-Fi for All procurement lots, delivery batches, and rollout contracts across DICT Regional Office 2.
                 </p>
             </div>
             <div class="page-actions" v-if="canCreate">
@@ -13,7 +13,7 @@
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                     </svg>
-                    <span>New Project</span>
+                    <span>New Delivery Lot</span>
                 </Link>
             </div>
         </div>
@@ -21,39 +21,28 @@
         <!-- Metric KPI Cards -->
         <div class="metric-grid" style="margin-bottom: 1.5rem;">
             <div class="metric-card">
-                <span class="metric-label">Total Portfolio</span>
+                <span class="metric-label">Delivery Lots</span>
                 <span class="metric-value">{{ metrics.total_projects }}</span>
-                <span class="metric-sub">Initiatives Defined</span>
+                <span class="metric-sub">Contract batches tracked</span>
             </div>
             <div class="metric-card">
                 <span class="metric-label">Active Deployments</span>
                 <span class="metric-value" style="color: var(--scale-pass);">{{ metrics.active_projects }}</span>
-                <span class="metric-sub">Currently in execution</span>
+                <span class="metric-sub">In active execution</span>
             </div>
             <div class="metric-card">
-                <span class="metric-label">Allocated Investment</span>
+                <span class="metric-label">Allocated Funding</span>
                 <span class="metric-value" style="color: var(--c-primary); font-size: 1.45rem;">
                     {{ formatCurrency(metrics.total_budget) }}
                 </span>
-                <span class="metric-sub">GAA & Partner Funding</span>
+                <span class="metric-sub">GAA & Regional Allocation</span>
             </div>
             <div class="metric-card">
-                <span class="metric-label">Archetypes Distribution</span>
-                <div style="display: flex; gap: 0.35rem; margin-top: 0.4rem; flex-wrap: wrap;">
-                    <span class="badge badge-kind-a" :title="'Kind A (Site Deployment): ' + metrics.kind_counts.site">
-                        A: {{ metrics.kind_counts.site }}
-                    </span>
-                    <span class="badge badge-kind-b" :title="'Kind B (Institution Adoption): ' + metrics.kind_counts.institution">
-                        B: {{ metrics.kind_counts.institution }}
-                    </span>
-                    <span class="badge badge-kind-c" :title="'Kind C (Activities & GAD): ' + metrics.kind_counts.activity">
-                        C: {{ metrics.kind_counts.activity }}
-                    </span>
-                    <span class="badge badge-kind-d" :title="'Kind D (Milestones & Studies): ' + metrics.kind_counts.milestone">
-                        D: {{ metrics.kind_counts.milestone }}
-                    </span>
+                <span class="metric-label">Regional Reach</span>
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--c-ink); margin-top: 0.35rem;">
+                    5 Provinces
                 </div>
-                <span class="metric-sub" style="margin-top: 0.25rem;">4 Tracking Models</span>
+                <span class="metric-sub" style="margin-top: 0.25rem;">Batanes, Cagayan, Isabela, NV, Quirino</span>
             </div>
         </div>
 

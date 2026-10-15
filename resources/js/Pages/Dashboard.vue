@@ -5,18 +5,18 @@
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem;">
                 <div>
                     <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
-                        <span class="badge badge-kind-a" style="font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; padding: 0.2rem 0.55rem;">RECON COMMAND</span>
-                        <span style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--c-ink-muted);">DICT REGION 02</span>
+                        <span class="badge badge-kind-a" style="font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; padding: 0.2rem 0.55rem;">DICT REGION 02</span>
+                        <span style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--c-ink-muted);">FREE WI-FI FOR ALL PROJECT</span>
                         <span class="chip-status status-online" style="margin-left: 0.35rem; font-size: 0.72rem;">
                             <span class="status-dot"></span>
                             <span>Live Telemetry</span>
                         </span>
                     </div>
                     <h1 style="font-size: 1.45rem; font-weight: 800; color: var(--c-ink); margin: 0; letter-spacing: -0.02em;">
-                        Regional Operations & Infrastructure Dashboard
+                        Free Wi-Fi Project Operations & Rollout
                     </h1>
                     <div style="font-size: 0.84rem; color: var(--c-ink-muted); margin-top: 0.25rem;">
-                        Tracking {{ summary.total_sites }} project sites across 5 provinces (Batanes, Cagayan, Isabela, Nueva Vizcaya, Quirino)
+                        Tracking {{ summary.total_sites }} Free Wi-Fi access sites across 5 provinces (Batanes, Cagayan, Isabela, Nueva Vizcaya, Quirino)
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                             <line x1="9" x2="9" y1="3" y2="18"></line>
                             <line x1="15" x2="15" y1="6" y2="21"></line>
                         </svg>
-                        <span>Explore Interactive Map</span>
+                        <span>Explore Free Wi-Fi Map</span>
                     </Link>
                 </div>
             </div>
@@ -44,16 +44,16 @@
         <div class="grid-3" style="margin-bottom: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
             <div class="metric-card">
                 <div class="metric-card-top">
-                    <span class="metric-label">Active Initiatives</span>
-                    <span class="badge badge-kind-a">{{ summary.total_projects }} Projects</span>
+                    <span class="metric-label">Program Scope</span>
+                    <span class="badge badge-kind-a">Region 02</span>
                 </div>
-                <div class="metric-value">{{ summary.total_projects }}</div>
-                <div class="metric-subtext">Free Wi-Fi, GovNet, eLGU & Capacity Programs</div>
+                <div class="metric-value" style="font-size: 1.45rem;">Free Wi-Fi for All</div>
+                <div class="metric-subtext">Delivery lots & contracts (PICS, PIALEOS, PoP, SINAG)</div>
             </div>
 
             <div class="metric-card">
                 <div class="metric-card-top">
-                    <span class="metric-label">Operational Sites</span>
+                    <span class="metric-label">Operational Wi-Fi Sites</span>
                     <span style="color: var(--scale-success); font-weight: 700; font-size: 0.85rem; font-family: var(--font-mono);">
                         {{ summary.completion_rate }}% Online
                     </span>
@@ -62,7 +62,7 @@
                     {{ summary.operational_sites }} 
                     <span style="font-size: 0.95rem; font-weight: 500; color: var(--c-ink-muted);">/ {{ summary.total_sites }} Sites</span>
                 </div>
-                <div class="metric-subtext">Average rollout cycle time: {{ summary.average_cycle_time }} days</div>
+                <div class="metric-subtext">Average activation cycle time: {{ summary.average_cycle_time }} days</div>
             </div>
 
             <div class="metric-card">
@@ -71,7 +71,7 @@
                     <span class="badge badge-kind-b">{{ summary.scope_coverage.coverage_pct }}% Covered</span>
                 </div>
                 <div class="metric-value">{{ summary.scope_coverage.covered_lgus }} / {{ summary.scope_coverage.total_lgus }}</div>
-                <div class="metric-subtext">Cities & municipalities with active DICT presence</div>
+                <div class="metric-subtext">LGUs with active Free Wi-Fi connectivity</div>
             </div>
         </div>
 
@@ -84,7 +84,7 @@
                 @click="activeTab = 'progress'"
                 style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600;"
             >
-                📊 Implementation Progress & Projects
+                📊 Rollout & Delivery Lots
             </button>
             <button 
                 type="button" 
@@ -93,7 +93,7 @@
                 @click="activeTab = 'provinces'"
                 style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600;"
             >
-                🏛️ Provinces & LGU Breakdown
+                🏛️ Provinces & LGUs
             </button>
             <button 
                 type="button" 
@@ -117,15 +117,15 @@
                     <div>
                         <div class="card-title">Rollout Trajectory & Monthly Velocity</div>
                         <div style="font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
-                            Monthly completed sites vs planned regional targets
+                            Monthly activated Free Wi-Fi sites vs planned targets
                         </div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; font-family: var(--font-mono);">
                         <span style="display: flex; align-items: center; gap: 0.3rem;">
-                            <span style="width: 10px; height: 10px; background: var(--scale-success); border-radius: 2px;"></span> Actual Completed
+                            <span style="width: 10px; height: 10px; background: var(--scale-success); border-radius: 2px;"></span> Actual Activated
                         </span>
                         <span style="display: flex; align-items: center; gap: 0.3rem;">
-                            <span style="width: 10px; height: 10px; background: var(--c-border-hover); border-radius: 2px;"></span> Planned Target
+                            <span style="width: 10px; height: 10px; background: var(--c-border-hover); border-radius: 2px;"></span> Target Plan
                         </span>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                                 <div :style="{ height: getBarHeight(trajectory.planned[idx]) + '%', width: '12px', background: 'var(--c-border-hover)', borderRadius: '2px 2px 0 0' }"
                                      title="Planned Target"></div>
                                 <div :style="{ height: getBarHeight(trajectory.actual[idx]) + '%', width: '12px', background: 'var(--scale-success)', borderRadius: '2px 2px 0 0' }"
-                                     title="Actual Completed"></div>
+                                     title="Actual Activated"></div>
                             </div>
                             <div style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--c-ink-muted); white-space: nowrap;">
                                 {{ label.split(' ')[0] }}
@@ -148,29 +148,29 @@
                         </div>
                     </div>
                     <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.75rem;">
-                        <span>Pacing within scheduled variance across Region 2</span>
+                        <span>Site activations progressing across all 5 provinces in Region 2</span>
                         <span style="font-family: var(--font-mono); color: var(--scale-success); font-weight: 600;">Velocity: Steady</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Priority Programs Table -->
+            <!-- Priority Delivery Lots Table -->
             <div class="card" style="margin-bottom: 1.5rem;">
                 <div class="card-header">
                     <div>
-                        <div class="card-title">Priority Programs Directory</div>
+                        <div class="card-title">Free Wi-Fi Delivery Lots & Contracts</div>
                         <div style="font-size: 0.78rem; color: var(--c-ink-muted); margin-top: 0.2rem;">
-                            Live accomplishments calculated from field site telemetry
+                            Live status and completion across procurement lots and batches
                         </div>
                     </div>
-                    <Link href="/projects" class="btn btn-outline btn-sm">View All {{ summary.total_projects }} Projects →</Link>
+                    <Link href="/projects" class="btn btn-outline btn-sm">View All Lots & Contracts →</Link>
                 </div>
                 <div class="table-wrapper">
                     <table class="table-modern">
                         <thead>
                             <tr>
-                                <th>Initiative</th>
-                                <th>Archetype</th>
+                                <th>Delivery Lot / Contract</th>
+                                <th>Category</th>
                                 <th>Accomplishment Rate</th>
                                 <th>Action</th>
                             </tr>
@@ -182,7 +182,7 @@
                                     <div style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--c-ink-muted);">{{ proj.code }} • {{ proj.sites_count }} sites</div>
                                 </td>
                                 <td>
-                                    <span :class="'badge badge-kind-' + proj.kind.toLowerCase()">Kind {{ proj.kind }}</span>
+                                    <span class="badge badge-kind-a">Free Wi-Fi</span>
                                 </td>
                                 <td>
                                     <div style="display: flex; align-items: center; gap: 0.65rem;">
@@ -193,58 +193,11 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <Link :href="'/map?project_id=' + proj.id" class="btn btn-ghost btn-sm" style="font-size: 0.76rem;">View Map →</Link>
+                                    <Link :href="'/map?project_id=' + proj.id" class="btn btn-ghost btn-sm" style="font-size: 0.76rem;">View On Map →</Link>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-
-            <!-- 4 Archetypes Breakdown -->
-            <div class="grid-4" style="margin-bottom: 1rem;">
-                <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-a-bg); border: 1px solid var(--kind-a-border);">
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
-                        <span class="badge badge-kind-a">Kind A</span>
-                        <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--kind-a);">{{ archetypeStats.kind_a.sites_count }} Sites</strong>
-                    </div>
-                    <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 0.2rem;">Physical Deployments</div>
-                    <p style="font-size: 0.75rem; color: var(--c-ink-secondary); margin: 0; line-height: 1.4;">
-                        Free Wi-Fi, GovNet, PIALEOS, Satellite terminals.
-                    </p>
-                </div>
-
-                <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-b-bg); border: 1px solid var(--kind-b-border);">
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
-                        <span class="badge badge-kind-b">Kind B</span>
-                        <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--kind-b);">{{ archetypeStats.kind_b.sites_count }} LGUs</strong>
-                    </div>
-                    <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 0.2rem;">System Adoptions</div>
-                    <p style="font-size: 0.75rem; color: var(--c-ink-secondary); margin: 0; line-height: 1.4;">
-                        eLGU, eGovPay, eGovPH, GovMail, PNPKI rollouts.
-                    </p>
-                </div>
-
-                <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-c-bg); border: 1px solid var(--kind-c-border);">
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
-                        <span class="badge badge-kind-c">Kind C</span>
-                        <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--kind-c);">{{ archetypeStats.kind_c.sites_count }} Cohorts</strong>
-                    </div>
-                    <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 0.2rem;">Capacity & Trainings</div>
-                    <p style="font-size: 0.75rem; color: var(--c-ink-secondary); margin: 0; line-height: 1.4;">
-                        DigitalJobsPH, tech literacy with sex-disaggregated GAD metrics.
-                    </p>
-                </div>
-
-                <div style="padding: 1rem; border-radius: var(--radius-md); background: var(--kind-d-bg); border: 1px solid var(--kind-d-border);">
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
-                        <span class="badge badge-kind-d">Kind D</span>
-                        <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--kind-d);">{{ archetypeStats.kind_d.sites_count }} Studies</strong>
-                    </div>
-                    <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 0.2rem;">Milestones & Surveys</div>
-                    <p style="font-size: 0.75rem; color: var(--c-ink-secondary); margin: 0; line-height: 1.4;">
-                        Regional surveys and policy sweeps without fixed coordinates.
-                    </p>
                 </div>
             </div>
         </div>
