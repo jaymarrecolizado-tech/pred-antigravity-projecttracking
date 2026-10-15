@@ -3,11 +3,9 @@
         <!-- Sidebar Navigation -->
         <aside class="app-sidebar">
             <div class="sidebar-header">
-                <div class="brand-badge">NMS·V2</div>
-                <div class="brand-info">
-                    <div class="brand-title">DICT Region 2</div>
-                    <div class="brand-subtitle">Rollout Tracker</div>
-                </div>
+                <Link href="/" style="text-decoration: none;">
+                    <ReconLogo size="md" subtitle="DICT REGION 2" :withGovBadge="true" />
+                </Link>
             </div>
 
             <!-- Program Switcher Card (NMS Reference) -->
@@ -227,6 +225,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
+import ReconLogo from '@/Components/Brand/ReconLogo.vue';
 
 const page = usePage();
 const searchQuery = ref('');

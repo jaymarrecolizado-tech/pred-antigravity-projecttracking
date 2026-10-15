@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title inertia>{{ config('app.name', 'DICT R2 Project Tracker') }}</title>
+        <title inertia>{{ config('app.name', 'RECON • DICT Region 2') }}</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+        <meta name="description" content="RECON — Regional Execution, Coordination & Operations Network for DICT Region 2">
 
         <!-- Google Fonts: Inter & JetBrains Mono -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

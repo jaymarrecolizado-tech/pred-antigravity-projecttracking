@@ -1,13 +1,15 @@
-# DICT Region 2 Infrastructure & Program Rollout Monitoring Platform
+# RECON • Regional Execution, Coordination & Operations Network
+### Department of Information and Communications Technology — Regional Office 02 (Cagayan Valley)
 
 [![Laravel 12](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=flat&logo=laravel&logoColor=white)](https://laravel.com)
 [![Vue 3](https://img.shields.io/badge/Vue-3.x-4FC08D?style=flat&logo=vue.js&logoColor=white)](https://vuejs.org)
 [![Inertia.js](https://img.shields.io/badge/Inertia.js-v2-9553E9?style=flat&logo=inertia&logoColor=white)](https://inertiajs.com)
 [![Vanilla CSS](https://img.shields.io/badge/CSS-Vanilla%20Tokens-1572B6?style=flat&logo=css3&logoColor=white)](resources/css)
-[![Leaflet](https://img.shields.io/badge/Map-Leaflet%20%2B%20CARTO-199900?style=flat&logo=leaflet&logoColor=white)](https://leafletjs.com)
+[![Leaflet](https://img.shields.io/badge/Map-Leaflet%20%2B%20Esri-199900?style=flat&logo=leaflet&logoColor=white)](https://leafletjs.com)
+[![Graphify](https://img.shields.io/badge/Knowledge%20Graph-Graphify-6366F1?style=flat)](graphify-out)
 [![Test Suite](https://img.shields.io/badge/Tests-59%20Passing%20(371%20Assertions)-success)](tests)
 
-> **Regional Mission**: A mission-critical geospatial monitoring and portfolio tracking platform built for the **Department of Information and Communications Technology (DICT) Regional Office 02 (Cagayan Valley)**. Tracks programs across 5 provinces (**Batanes**, **Cagayan**, **Isabela**, **Nueva Vizcaya**, **Quirino**), 12 Congressional Districts, and 91 Cities & Municipalities with real-time analytics, mobile field verification, and tamper-evident audit logs.
+> **RECON Mission**: A mission-critical geospatial command, monitoring, and portfolio execution platform engineered for the **Department of Information and Communications Technology (DICT) Regional Office 02 (Cagayan Valley)**. Tracks initiatives across 5 provinces (**Batanes**, **Cagayan**, **Isabela**, **Nueva Vizcaya**, **Quirino**), 12 Congressional Districts, and 93 Cities & Municipalities with real-time analytics, mobile field verification, GPS proximity safeguards, and tamper-evident audit trails.
 
 ---
 

@@ -3,6 +3,10 @@
         <!-- Page Header -->
         <div class="page-header">
             <div class="page-title-group">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+                    <span class="badge badge-kind-a" style="font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; padding: 0.2rem 0.5rem;">RECON COMMAND</span>
+                    <span style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--c-ink-muted);">DICT REGION 02</span>
+                </div>
                 <h1>Regional Infrastructure & Program Rollout</h1>
                 <div class="page-subtitle">
                     Live implementation and status telemetry across Region 2 (Cagayan Valley)

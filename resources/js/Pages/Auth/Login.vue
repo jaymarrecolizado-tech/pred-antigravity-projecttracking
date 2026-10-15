@@ -3,9 +3,17 @@
         <div class="auth-card">
             <!-- Brand Header -->
             <div class="auth-header">
-                <div class="brand-badge-large">NMS·V2</div>
-                <h1 class="auth-title">DICT Region 2</h1>
-                <p class="auth-subtitle">Project & Infrastructure Rollout Tracker</p>
+                <div style="display: flex; justify-content: center; margin-bottom: 0.6rem;">
+                    <ReconLogo size="xl" variant="emblem" />
+                </div>
+                <h1 class="auth-title" style="margin-top: 0.5rem; letter-spacing: -0.03em; font-weight: 800; font-size: 1.85rem;">RECON</h1>
+                <p class="auth-subtitle" style="font-size: 0.8rem; font-weight: 600; color: var(--c-ink-muted); margin-top: 0.25rem;">
+                    Regional Execution, Coordination & Operations Network
+                </p>
+                <div style="display: inline-flex; align-items: center; gap: 0.45rem; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; color: var(--c-primary); margin-top: 0.5rem; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: var(--c-surface-subtle); border: 1px solid var(--c-border-subtle);">
+                    <span style="width: 6px; height: 6px; border-radius: 50%; background: #10b981; box-shadow: 0 0 6px #10b981;"></span>
+                    <span>DICT REGIONAL OFFICE 02</span>
+                </div>
             </div>
 
             <!-- Error Banner -->
@@ -116,6 +124,7 @@
 
 <script setup>
 import { useForm } from '@inertiajs/vue3';
+import ReconLogo from '@/Components/Brand/ReconLogo.vue';
 
 const form = useForm({
     email: '',

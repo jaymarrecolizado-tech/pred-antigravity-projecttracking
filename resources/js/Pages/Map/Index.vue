@@ -4,7 +4,7 @@
             <!-- Floating Top Control Ribbon (NMS Reference) -->
             <div class="map-floating-ribbon">
                 <div class="ribbon-metric-pill">
-                    <span class="ribbon-label">POINTS</span>
+                    <span class="ribbon-label" style="color: var(--c-primary); font-weight: 800;">RECON GIS</span>
                     <span class="ribbon-val">{{ activePointsCount }} / {{ summary.total_sites }}</span>
                 </div>
 
