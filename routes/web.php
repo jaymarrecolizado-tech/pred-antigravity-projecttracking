@@ -65,6 +65,7 @@ Route::middleware(['auth', 'enforce.2fa'])->group(function () {
     // Accomplishment Reporting & Automated Subscriptions
     Route::get('/reports', [\App\Http\Controllers\Reporting\ReportController::class, 'index'])->name('reports.index');
     Route::get('/reports/export/excel', [\App\Http\Controllers\Reporting\ReportController::class, 'exportExcel'])->name('reports.export.excel');
+    Route::get('/reports/export/csv', [\App\Http\Controllers\Reporting\ReportController::class, 'exportCsv'])->name('reports.export.csv');
     Route::post('/reports/subscriptions', [\App\Http\Controllers\Reporting\ReportController::class, 'storeSubscription'])->name('reports.subscriptions.store');
     Route::delete('/reports/subscriptions/{subscription}', [\App\Http\Controllers\Reporting\ReportController::class, 'destroySubscription'])->name('reports.subscriptions.destroy');
 

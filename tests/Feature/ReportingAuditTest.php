@@ -127,6 +127,19 @@ class ReportingAuditTest extends TestCase
         ]);
     }
 
+    public function test_csv_report_export_generates_valid_csv_and_logs_audit(): void
+    {
+        $response = $this->actingAs($this->admin)->get('/reports/export/csv?project_id=' . $this->project->id);
+
+        $response->assertStatus(200);
+        $response->assertHeader('content-disposition');
+
+        $this->assertDatabaseHas('audit_logs', [
+            'action' => 'report.export.csv',
+            'user_id' => $this->admin->id,
+        ]);
+    }
+
     public function test_user_can_create_and_delete_report_subscription(): void
     {
         $payload = [

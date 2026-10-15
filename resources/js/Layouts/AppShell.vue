@@ -1,11 +1,26 @@
 <template>
     <div class="app-shell" :data-theme="currentTheme">
+        <!-- Mobile Sidebar Backdrop Overlay -->
+        <div 
+            class="sidebar-backdrop" 
+            :class="{ active: isMobileMenuOpen }" 
+            @click="isMobileMenuOpen = false"
+        ></div>
+
         <!-- Sidebar Navigation -->
-        <aside class="app-sidebar">
+        <aside class="app-sidebar" :class="{ 'mobile-open': isMobileMenuOpen }">
             <div class="sidebar-header">
                 <Link href="/" style="text-decoration: none;">
                     <ReconLogo size="md" subtitle="DICT REGION 2" :withGovBadge="true" />
                 </Link>
+                <button 
+                    type="button" 
+                    class="mobile-close-btn" 
+                    @click="isMobileMenuOpen = false"
+                    aria-label="Close navigation"
+                >
+                    ✕
+                </button>
             </div>
 
             <!-- Sleek Region Status Pill -->
@@ -173,6 +188,19 @@
         <div class="main-canvas">
             <!-- Topbar -->
             <header class="topbar">
+                <button 
+                    type="button" 
+                    class="mobile-hamburger-btn" 
+                    @click="isMobileMenuOpen = !isMobileMenuOpen"
+                    aria-label="Toggle navigation menu"
+                >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
                 <div class="topbar-search">
                     <svg class="topbar-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -223,7 +251,7 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue';
-import { Link, usePage } from '@inertiajs/vue3';
+import { Link, usePage, router } from '@inertiajs/vue3';
 import ReconLogo from '@/Components/Brand/ReconLogo.vue';
 
 const page = usePage();
@@ -235,6 +263,11 @@ const currentRoute = computed(() => {
 });
 
 const isAdminOpen = ref(false);
+const isMobileMenuOpen = ref(false);
+
+router.on('navigate', () => {
+    isMobileMenuOpen.value = false;
+});
 
 function toggleTheme() {
     currentTheme.value = currentTheme.value === 'dark' ? 'light' : 'dark';

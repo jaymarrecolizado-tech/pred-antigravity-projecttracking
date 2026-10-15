@@ -115,6 +115,16 @@ class ReportController extends Controller
 
     public function exportExcel(Request $request): BinaryFileResponse
     {
+        return $this->exportFile($request, 'xlsx');
+    }
+
+    public function exportCsv(Request $request): BinaryFileResponse
+    {
+        return $this->exportFile($request, 'csv');
+    }
+
+    protected function exportFile(Request $request, string $format = 'xlsx'): BinaryFileResponse
+    {
         $user = $request->user();
         if (!$this->grantResolver->allows($user, 'report.export') && !$this->grantResolver->allows($user, '*')) {
             abort(403, 'Unauthorized to export reports.');
@@ -127,12 +137,13 @@ class ReportController extends Controller
             File::makeDirectory($reportsDir, 0755, true);
         }
 
-        $filename = 'DICT_R2_Accomplishment_Report_' . Carbon::now()->format('Ymd_His') . '.xlsx';
+        $filename = 'DICT_R02_Free_WiFi_Report_' . Carbon::now()->format('Ymd_His') . '.' . $format;
         $filePath = $reportsDir . DIRECTORY_SEPARATOR . $filename;
 
         $this->excelGenerator->generateToFile($filePath, $filters);
 
-        AuditLogger::log('report.export.excel', null, null, [
+        $action = $format === 'xlsx' ? 'report.export.excel' : 'report.export.csv';
+        AuditLogger::log($action, null, null, [
             'filename' => $filename,
             'filters' => $filters,
         ], $user);

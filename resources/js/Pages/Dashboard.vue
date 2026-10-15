@@ -76,13 +76,13 @@
         </div>
 
         <!-- Clean Segmented Tabs Navigation -->
-        <div class="tabs-nav" style="margin-bottom: 1.25rem; border-bottom: 1px solid var(--c-border); display: flex; gap: 0.5rem;">
+        <div class="tabs-nav" style="margin-bottom: 1.25rem; border-bottom: 1px solid var(--c-border); display: flex; gap: 0.5rem; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; padding-bottom: 4px;">
             <button 
                 type="button" 
                 class="tab-btn" 
                 :class="{ active: activeTab === 'progress' }"
                 @click="activeTab = 'progress'"
-                style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600;"
+                style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600; white-space: nowrap; flex-shrink: 0;"
             >
                 📊 Rollout & Delivery Lots
             </button>
@@ -91,7 +91,7 @@
                 class="tab-btn" 
                 :class="{ active: activeTab === 'provinces' }"
                 @click="activeTab = 'provinces'"
-                style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600;"
+                style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600; white-space: nowrap; flex-shrink: 0;"
             >
                 🏛️ Provinces & LGUs
             </button>
@@ -100,7 +100,7 @@
                 class="tab-btn" 
                 :class="{ active: activeTab === 'activity' }"
                 @click="activeTab = 'activity'"
-                style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600;"
+                style="padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 600; white-space: nowrap; flex-shrink: 0;"
             >
                 📋 Field Updates & Alerts
                 <span v-if="backlog.total_backlog > 0" class="badge" style="background: rgba(239, 68, 68, 0.15); color: var(--scale-danger); font-size: 0.68rem; margin-left: 0.4rem;">
@@ -204,7 +204,7 @@
 
         <!-- TAB 2: PROVINCES & LGU BREAKDOWN -->
         <div v-else-if="activeTab === 'provinces'">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
                 <!-- Provincial Rollup Leaderboard -->
                 <div class="card">
                     <div class="card-header">

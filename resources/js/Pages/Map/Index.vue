@@ -686,4 +686,54 @@ function onSiteSelected(siteProps) {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+    .map-floating-capsule {
+        top: 0.65rem;
+        left: 0.65rem;
+        padding: 0.35rem 0.65rem;
+        gap: 0.45rem;
+        max-width: calc(100vw - 4.5rem);
+    }
+
+    .capsule-title {
+        font-size: 0.76rem;
+    }
+
+    .capsule-subtitle {
+        display: none;
+    }
+
+    .map-floating-settings {
+        top: 0.65rem;
+        right: 0.65rem;
+    }
+
+    .map-settings-btn span {
+        display: none;
+    }
+
+    .map-settings-btn {
+        padding: 0.45rem 0.55rem;
+    }
+
+    .map-settings-popover {
+        right: 0;
+        width: calc(100vw - 1.5rem);
+        max-width: 320px;
+    }
+
+    .map-drawer {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        max-width: 100vw;
+        height: 65vh;
+        border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        border-bottom: none;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    }
+}
 </style>

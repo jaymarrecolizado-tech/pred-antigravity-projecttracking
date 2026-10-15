@@ -16,17 +16,18 @@ class ExcelReportGenerator
     ) {}
 
     /**
-     * Generate an Excel workbook for the given filters and write to target path.
+     * Generate an Excel or CSV workbook for the given filters and write to target path.
      */
     public function generateToFile(string $targetFilePath, array $filters = []): string
     {
-        $writer = new Writer();
+        $isCsv = str_ends_with(strtolower($targetFilePath), '.csv');
+        $writer = $isCsv ? new \OpenSpout\Writer\CSV\Writer() : new \OpenSpout\Writer\XLSX\Writer();
         $writer->openToFile($targetFilePath);
 
         // Header Rows
         $writer->addRow(Row::fromValues(['DEPARTMENT OF INFORMATION AND COMMUNICATIONS TECHNOLOGY - REGION 02']));
-        $writer->addRow(Row::fromValues(['RECON • REGIONAL EXECUTION, COORDINATION & OPERATIONS NETWORK']));
-        $writer->addRow(Row::fromValues(['Generated At:', Carbon::now()->toDateTimeString(), 'System: RECON Platform (R02)']));
+        $writer->addRow(Row::fromValues(['FREE WI-FI FOR ALL PROJECT • REGIONAL SITE STATUS & ACCOMPLISHMENT MATRIX']));
+        $writer->addRow(Row::fromValues(['Generated At:', Carbon::now()->toDateTimeString(), 'System: RECON Platform (DICT R02)']));
         $writer->addRow(Row::fromValues([])); // Empty row
 
         // Query Sites
@@ -69,10 +70,9 @@ class ExcelReportGenerator
         // Column Headers
         $headers = [
             'Site Code',
-            'Project Code',
-            'Project Name',
-            'Program',
-            'Archetype',
+            'Delivery Lot / Contract',
+            'Location Name',
+            'Facility Type',
             'Province',
             'Municipality / City',
             'Barangay',
@@ -92,10 +92,9 @@ class ExcelReportGenerator
 
             $writer->addRow(Row::fromValues([
                 $site->site_code ?? 'N/A',
-                $site->project?->code ?? '',
-                $site->project?->name ?? '',
-                $site->project?->program?->name ?? '',
-                strtoupper($site->project?->projectType?->kind ?? 'A'),
+                $site->project?->name ?? 'Free Wi-Fi for All',
+                $loc?->name ?? 'Public Wi-Fi Site',
+                strtoupper($loc?->category ?? 'OTHER'),
                 $hierarchy['province'] ?? 'Region 02',
                 $hierarchy['municipality'] ?? 'N/A',
                 $hierarchy['barangay'] ?? 'N/A',
